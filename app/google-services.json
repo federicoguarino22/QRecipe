@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "717231778908",
+    "firebase_url": "https://qrecipe-8e483.firebaseio.com",
+    "project_id": "qrecipe-8e483",
+    "storage_bucket": "qrecipe-8e483.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717231778908:android:3c55e0b0e02624fbb6ca99",
+        "android_client_info": {
+          "package_name": "it.uninsubria.qrecipe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717231778908-0ljlc6lu3j5vb4sgbpehd6hnjvf8gv0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDloydYhOwAFehgxlaJWDwfpErPfiVjfw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717231778908-0ljlc6lu3j5vb4sgbpehd6hnjvf8gv0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
