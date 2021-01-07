@@ -22,8 +22,8 @@ import java.util.List;
 import it.uninsubria.qrecipe.modelli.Ricetta;
 
 //adapter prende la lista dei modelli e crea le view
-public class RecipeAdapter extends ArrayAdapter<Ricetta> {
-    public RecipeAdapter(@NonNull Context context) {
+public class IngredientsAdapter extends ArrayAdapter<Ricetta> {
+    public IngredientsAdapter(@NonNull Context context) {
         super(context, 0);
     }
 
@@ -46,3 +46,5 @@ public class RecipeAdapter extends ArrayAdapter<Ricetta> {
         return convertView;
     }
 }
+
+
