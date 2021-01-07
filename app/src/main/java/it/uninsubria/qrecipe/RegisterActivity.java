@@ -27,6 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import it.uninsubria.qrecipe.modelli.Ricetta;
 import it.uninsubria.qrecipe.modelli.Utente;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -49,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
         registrazioneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                register(nameEditText.getText().toString(),
+                startRegister(nameEditText.getText().toString(),
                          cognomeEditText.getText().toString(),
                          usernameEditText.getText().toString(),
                          phoneEditText.getText().toString(),
@@ -60,106 +61,114 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
-    private void register(String name, String surname, String username, String phone, String email, String pwd, String confermapwd, int idTipo) {
+    //funzione per iniziare la registrazione, fa tutte le validazioni
+    private void startRegister(String name, String surname, String username, String phone, String email, String pwd, String confermapwd, int idTipo){
         boolean isValid = validate(email, pwd, name, surname, username, phone, confermapwd);
         if(isValid){
-            //identifica utente o corriere
-            String tipo = "";
-            if(idTipo==R.id.utente){
-                tipo = "utente";
-            }
-            else if(idTipo==R.id.corriere){
-                tipo = "corriere";
-            }
-            //registrazione utente
-            //creo istanza oggetto utente
-            Utente utente = new Utente(email, pwd, name, surname, username, phone, tipo);
-            control_register(name,  surname,  username,  phone,  email,  pwd,  confermapwd, idTipo);
-
-            //salvare gli elementi sul db
-            final FirebaseDatabase database = FirebaseDatabase.getInstance();
-            DatabaseReference usersRef = database.getReference();
-            //push del nuovo oggetto
-            DatabaseReference pushedRef = usersRef.child("utenti").push();
-            //oggetto task
-            String userId = pushedRef.getKey();
-            Task <Void> task = usersRef.child("utenti").child(userId).setValue(utente);
-            //per aggiungere l'evento
-            task.addOnCompleteListener(this, new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    Toast.makeText(RegisterActivity.this, "Registrazione avvenuta con successo", Toast.LENGTH_LONG).show();
-                    //faccio il back per ritornare nella schermata precedente, finita la parte della registrazione
-                    RegisterActivity.this.finish();
-                }
-            });
-
+            control_register(name, surname, username, phone,  email, pwd, idTipo);
         }else{
             Toast.makeText(RegisterActivity.this, "Registrazione non valida", Toast.LENGTH_LONG).show();
         }
     }
+    //funzione che effettua effettivamente la registrazione
+    private void register(String name, String surname, String username, String phone, String email, String pwd, int idTipo) {
 
+
+        //identifica utente o corriere
+        String tipo = "";
+        if(idTipo==R.id.utente){
+            tipo = "utente";
+        }
+        else if(idTipo==R.id.corriere){
+            tipo = "corriere";
+        }
+        //registrazione utente
+        //creo istanza oggetto utente
+        Utente utente = new Utente(email, pwd, name, surname, username, phone, tipo);
+
+        //salvare gli elementi sul db
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference usersRef = database.getReference();
+        //push del nuovo oggetto
+        DatabaseReference pushedRef = usersRef.child("utenti").push();
+        //oggetto task
+        String userId = pushedRef.getKey();
+        Task <Void> task = usersRef.child("utenti").child(userId).setValue(utente);
+        //per aggiungere l'evento
+        task.addOnCompleteListener(this, new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                Toast.makeText(RegisterActivity.this, "Registrazione avvenuta con successo", Toast.LENGTH_LONG).show();
+                //faccio il back per ritornare nella schermata precedente, finita la parte della registrazione
+                RegisterActivity.this.finish();
+            }
+        });
+
+
+    }
+    //validare l'input inserito dall'utente
     private boolean validate(String email, String pwd, String name, String surname, String username, String phone, String confermapwd) {
         //se la pwd è diversa dalla sua conferma allora restituirà false
         if(!pwd.equals(confermapwd)){
             return false;
-        }return true;
-
-    }
-
-    private boolean updateUser(String email, String password, String name, String surname, String username, String phone, String tipo) {
-        //getting the specified user reference
-        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("utenti").child(email);
-
-        //aggiorna utente
-        Utente user = new Utente(email, password, name, surname, username, phone, tipo);
-        dR.setValue(user);
-        Toast.makeText(getApplicationContext(), "User Updated", Toast.LENGTH_LONG).show();
+        }
+        if(email== null || email.isEmpty()){
+            return false;
+        }
+        if(username== null || username.isEmpty()){
+            return false;
+        }
+        if(name== null || name.isEmpty()){
+            return false;
+        }
+        if(surname== null || surname.isEmpty()){
+            return false;
+        }
+        if(phone== null || phone.isEmpty()){
+            return false;
+        }
         return true;
+
+
     }
 
-    private boolean deleteUser(String email) {
-        //getting the specified user reference
-        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("utenti").child(email);
-
-        //rimuovi l'utente
-        dR.removeValue();
-        return true;
-    }
-
-    private void control_register(String name, String surname, String username, String phone, String email, String pwd, String confermapwd, int idTipo) {
+    private void control_register(String name, String surname, String username, String phone, String email, String pwd, int idTipo) {
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference usersRef = database.getReference();
 
-
-        Query userQuery = usersRef.child("utenti").orderByChild("email").equalTo(email);
-        userQuery.addValueEventListener(new ValueEventListener() {
+        //utenti con tutti i suoi input
+        Query userQuery = usersRef.child("utenti");
+        userQuery.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                boolean registerIn = false;
+                boolean registerIn = true;
                 if(dataSnapshot.exists()) {
-                    Utente u = dataSnapshot.getChildren().iterator().next().getValue(Utente.class);
-                    if(!u.getEmail().equals(email) || !u.getPhone().equals((phone)) || !u.getUsername().equals(username)){
-                        registerIn = true;
+                    for(DataSnapshot data:dataSnapshot.getChildren()){
+                        Utente utente =  data.getValue(Utente.class);
+                        if(utente.getEmail()!=null && utente.getEmail().equals(email)){
+                            registerIn = false;
+                            break;
+                        }
+                        else if(utente.getPhone()!=null && utente.getPhone().equals(phone)){
+                            registerIn = false;
+                            break;
+                        }
+                        else if(utente.getUsername()!=null && utente.getUsername().equals(username)){
+                            registerIn = false;
+                            break;
+                        }
                     }
                 }
-                registerResult(registerIn);
+                if(registerIn){
+                    register(name, surname, username, phone, email, pwd, idTipo);
+                }else{
+                    Toast.makeText(RegisterActivity.this, "Utente già esistente", Toast.LENGTH_LONG).show();
+                }
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 // ...
             }
         });
-    }
-
-    private void registerResult(boolean registerIn) {
-        //se il login viene effettuato con successo entro nel MainActivity
-        if (registerIn) {
-            Intent intent = new Intent(this, MainActivity.class);
-            //flag activity new task-->crea un nuovo task per la nuova activity
-            //flag activity clear task-->cancella quello che c'è nell'attuale task
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-        }
     }
 }

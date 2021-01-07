@@ -4,6 +4,7 @@ public class IngredienteRicetta {
     private String id;
     private Double quantita;
 
+
     public String getId() {
         return id;
     }
