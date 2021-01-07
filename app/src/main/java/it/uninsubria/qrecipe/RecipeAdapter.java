@@ -1,6 +1,7 @@
 package it.uninsubria.qrecipe;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
@@ -45,4 +46,6 @@ public class RecipeAdapter extends ArrayAdapter<Ricetta> {
         }
         return convertView;
     }
+
+
 }
