@@ -107,10 +107,4 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(LoginActivity.this, "Login errato", Toast.LENGTH_LONG).show();
         }
     }
-
-
-
-
-
-
 }

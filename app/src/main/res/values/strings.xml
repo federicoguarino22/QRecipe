@@ -12,4 +12,8 @@
     <string name="username">Username</string>
     <string name="non_sei_registrato">Non sei registrato? Registrati</string>
     <string name="registrati">Registrati</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_delivery_details">DeliveryDetails</string>
+    <string name="google_maps_key">AIzaSyDqxwW1xctIjic4aBgSYGeKjiH1NjM1ihg</string>
+    <string name="title_activity_maps2">Map</string>
 </resources>
