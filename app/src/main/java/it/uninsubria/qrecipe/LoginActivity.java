@@ -103,6 +103,9 @@ public class LoginActivity extends AppCompatActivity {
             //flag activity clear task-->cancella quello che c'è nell'attuale task
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
+            /**
+             * startActivity(new Intent(getApplicationContext(), Scanner.class));
+             */
         }else{
             Toast.makeText(LoginActivity.this, "Login errato", Toast.LENGTH_LONG).show();
         }
