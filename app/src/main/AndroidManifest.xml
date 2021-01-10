@@ -37,9 +37,7 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
         <activity android:name=".DeliveryDetails" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_delivery_details" />
+
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -48,6 +46,7 @@
         <activity android:name=".DeliveryInfo" />
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".RecipeActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

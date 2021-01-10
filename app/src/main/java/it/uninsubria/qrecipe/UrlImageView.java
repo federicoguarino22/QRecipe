@@ -85,7 +85,7 @@ public class UrlImageView extends androidx.appcompat.widget.AppCompatImageView {
     /*
      * just for sync
      */
-    private Object                       loadingMonitor = new Object();
+    private Object                     loadingMonitor = new Object();
 
     public UrlImageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);

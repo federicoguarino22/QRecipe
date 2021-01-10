@@ -35,22 +35,15 @@ public class IngredientsAdapter extends ArrayAdapter<IngredienteRicetta> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.listitem_ingredients, parent,false);
         }
         TextView name = (TextView)convertView.findViewById(R.id.ingredienti);
-        name.setText(ingrediente.getId());
+        name.setText(ingrediente.getIngrediente().getName());
 
-        TextView prezzo = (TextView)convertView.findViewById(R.id.prezzo_text);
-        prezzo.setText(ingrediente.getId());
+        /*TextView prezzo = (TextView)convertView.findViewById(R.id.prezzo_text);
+        prezzo.setText(ingrediente.getIngrediente().getCosto());*/
+
 
         return convertView;
     }
-    /*per il collegamento dalla ricette alla lista degli ingredienti
-    recipe_name.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            //passaggio per entrare nella registrazione
-            Intent intent_ingredients = new Intent(RecipeAdapter.this, IngredientsAdapter.class);
-            startActivity(intent_ingredients);
-        }
-    });*/
+
 }
 
 

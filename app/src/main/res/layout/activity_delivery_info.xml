@@ -32,25 +32,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 
-    <Button
-        android:id="@+id/goOrderList"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:text=">"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="normal"
-        app:backgroundTint="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="@+id/ordine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toEndOf="@+id/ordine"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:strokeColor="?android:attr/windowBackground" />
 </androidx.constraintlayout.widget.ConstraintLayout>

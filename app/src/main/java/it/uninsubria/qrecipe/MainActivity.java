@@ -1,8 +1,13 @@
 package it.uninsubria.qrecipe;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -42,6 +47,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 // ...
+            }
+        });
+
+        //ogni volta che viene cliccato un oggetto della lista
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //recupero ricetta cliccata
+                Ricetta ricetta = recipeAdapter.getItem(position);
+                //chiamare recipeactivity
+                Intent intent_recipe = new Intent(MainActivity.this, RecipeActivity.class);
+                intent_recipe.putExtra("recipeId", ricetta.getId());
+                startActivity(intent_recipe);
             }
         });
     }

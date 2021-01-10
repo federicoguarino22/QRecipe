@@ -1,20 +1,12 @@
 package it.uninsubria.qrecipe;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -26,8 +18,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-
-import it.uninsubria.qrecipe.modelli.Ricetta;
 import it.uninsubria.qrecipe.modelli.Utente;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -127,6 +117,7 @@ public class RegisterActivity extends AppCompatActivity {
         if(phone== null || phone.isEmpty()){
             return false;
         }
+        
         return true;
 
 
