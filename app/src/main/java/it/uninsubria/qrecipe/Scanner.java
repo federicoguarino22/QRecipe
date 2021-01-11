@@ -27,6 +27,7 @@ public class Scanner extends AppCompatActivity {
     CodeScannerView scannView;
     TextView resultData;
     Button conferma;
+    String result = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,8 @@ public class Scanner extends AppCompatActivity {
         codeScanner.setDecodeCallback( new DecodeCallback() {
             @Override
             public void onDecoded(@NonNull Result result) {
+                //salvo il risultato
+                Scanner.this.result = result.getText();
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -59,7 +62,11 @@ public class Scanner extends AppCompatActivity {
         conferma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), RecipeActivity.class));
+                //apre il dettaglio della ricetta
+                Intent intent_recipe = new Intent(Scanner.this, RecipeActivity.class);
+                intent_recipe.putExtra("recipeId", result);
+                startActivity(intent_recipe);
+                finish();
             }
         });
     }
@@ -79,7 +86,7 @@ public class Scanner extends AppCompatActivity {
 
             @Override
             public void onPermissionDenied(PermissionDeniedResponse response) {
-                Toast.makeText(Scanner.this, "Camera permission is Required.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Scanner.this, "Richiesti permessi per la camera", Toast.LENGTH_SHORT).show();
             }
 
             @Override

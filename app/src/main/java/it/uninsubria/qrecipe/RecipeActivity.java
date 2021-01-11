@@ -2,6 +2,7 @@ package it.uninsubria.qrecipe;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -56,9 +57,15 @@ public class RecipeActivity  extends AppCompatActivity {
                                 for(IngredienteRicetta ingredienteRicetta: ricetta.getIngredienti()){
                                     //restituisce l'ingrediente
                                     Ingrediente ingrediente= dataSnapshot.child(ingredienteRicetta.getId()).getValue(Ingrediente.class);
-                                    //associa l'ingrediente all'ingrediente ricetta dell'adapter
-                                    ingredienteRicetta.setIngrediente(ingrediente);
-                                    ingredientsAdapter.add(ingredienteRicetta);
+                                    if(ingrediente!=null){
+                                        //associa l'ingrediente all'ingrediente ricetta dell'adapter
+                                        ingredienteRicetta.setIngrediente(ingrediente);
+                                        ingredientsAdapter.add(ingredienteRicetta);
+                                    }
+                                    else{
+                                        Log.w("RecipeActivity", "Ingrediente nullo "+ingredienteRicetta.getId());
+                                    }
+
                                 }
                             }
                         }

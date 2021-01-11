@@ -1,16 +1,16 @@
 package it.uninsubria.qrecipe.modelli;
 
 public class Ingrediente {
-    private String name;
+    private String nome;
     private String unita_misura;
     private Double costo;
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getUnita_misura() {

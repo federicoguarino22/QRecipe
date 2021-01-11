@@ -104,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             /**
-             * startActivity(new Intent(getApplicationContext(), Scanner.class));
+             *
              */
         }else{
             Toast.makeText(LoginActivity.this, "Login errato", Toast.LENGTH_LONG).show();

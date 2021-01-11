@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -59,6 +60,15 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent_recipe = new Intent(MainActivity.this, RecipeActivity.class);
                 intent_recipe.putExtra("recipeId", ricetta.getId());
                 startActivity(intent_recipe);
+            }
+        });
+
+        //
+        Button qrcode = findViewById(R.id.QRCode);
+        qrcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Scanner.class));
             }
         });
     }
