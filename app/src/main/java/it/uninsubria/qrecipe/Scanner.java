@@ -69,7 +69,7 @@ public class Scanner extends AppCompatActivity {
         super.onResume();
         requestForCamera();
     }
-
+    // gestione dei permessi della fotocamera
     private void requestForCamera() {
         Dexter.withActivity(this).withPermission(Manifest.permission.CAMERA).withListener(new PermissionListener() {
             @Override
