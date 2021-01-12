@@ -27,7 +27,7 @@ public class Scanner extends AppCompatActivity {
     CodeScannerView scannView;
     TextView resultData;
     Button conferma;
-    String result = "";
+    String result = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,11 +62,16 @@ public class Scanner extends AppCompatActivity {
         conferma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //apre il dettaglio della ricetta
-                Intent intent_recipe = new Intent(Scanner.this, RecipeActivity.class);
-                intent_recipe.putExtra("recipeId", result);
-                startActivity(intent_recipe);
-                finish();
+                if(result!=null){
+                    //apre il dettaglio della ricetta
+                    Intent intent_recipe = new Intent(Scanner.this, RecipeActivity.class);
+                    intent_recipe.putExtra("recipeId", result);
+                    startActivity(intent_recipe);
+                    finish();
+                }
+                else{
+                    Toast.makeText(Scanner.this, "QRCode non identificato", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
