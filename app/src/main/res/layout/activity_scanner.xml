@@ -32,7 +32,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="TextView"
         android:textColor="#F40A0A"
         app:layout_constraintBottom_toTopOf="@+id/ConfirmQrCode"
         app:layout_constraintEnd_toEndOf="parent"
