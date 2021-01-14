@@ -6,9 +6,24 @@ import java.util.List;
 public class Ordine {
     private String id;
     private String data;
-    private String ricetta;
+    private Ricetta ricetta;
     private String cliente;
+    private String indirizzo;
     private List<IngredienteOrdine> ingredienti;
+    private String stato;
+
+    public Ordine() {
+    }
+
+    public Ordine(String id, String data, Ricetta ricetta, String cliente, String indirizzo, List<IngredienteOrdine> ingredienti, String stato) {
+        this.id = id;
+        this.data = data;
+        this.ricetta = ricetta;
+        this.cliente = cliente;
+        this.indirizzo = indirizzo;
+        this.ingredienti = ingredienti;
+        this.stato = stato;
+    }
 
     public String getId() {
         return id;
@@ -26,11 +41,11 @@ public class Ordine {
         this.data = data;
     }
 
-    public String getRicetta() {
+    public Ricetta getRicetta() {
         return ricetta;
     }
 
-    public void setRicetta(String ricetta) {
+    public void setRicetta(Ricetta ricetta) {
         this.ricetta = ricetta;
     }
 
@@ -42,11 +57,21 @@ public class Ordine {
         this.cliente = cliente;
     }
 
+    public String getIndirizzo() { return indirizzo; }
+
+    public void setIndirizzo(String indirizzo) { this.indirizzo = indirizzo; }
+
     public List<IngredienteOrdine> getIngredienti() {
         return ingredienti;
     }
 
-    public void setIngredienti(List<IngredienteOrdine> ingredienti) {
-        this.ingredienti = ingredienti;
+    public void setIngredienti(List<IngredienteOrdine> ingredienti) { this.ingredienti = ingredienti; }
+
+    public String getStato() {
+        return stato;
+    }
+
+    public void setStato(String stato) {
+        this.stato = stato;
     }
 }

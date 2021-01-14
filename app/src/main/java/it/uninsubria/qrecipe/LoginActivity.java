@@ -76,14 +76,16 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 boolean loggedIn = false;
+                String tipoUtente = null;
                 if(dataSnapshot.exists()) {
                     Utente u = dataSnapshot.getChildren().iterator().next().getValue(Utente.class);
+                    tipoUtente = u.getTipo();
                     if(u.getPassword().equals(pwd)) {
                         loggedIn = true;
                     }
                 }
 
-                loginResult(loggedIn);
+                loginResult(loggedIn, tipoUtente);
             }
 
             @Override
@@ -93,11 +95,11 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void loginResult(boolean loggedIn) {
+    private void loginResult(boolean loggedIn, String tipo) {
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
         loadingProgressBar.setVisibility(View.GONE);
         //se il login viene effettuato con successo entro nel MainActivity
-        if(loggedIn){
+        if(loggedIn && tipo.equals("utente")){
             Intent intent = new Intent(this, MainActivity.class);
             //flag activity new task-->crea un nuovo task per la nuova activity
             //flag activity clear task-->cancella quello che c'è nell'attuale task
@@ -106,6 +108,10 @@ public class LoginActivity extends AppCompatActivity {
             /**
              *
              */
+        }else if(loggedIn && tipo.equals("corriere")){
+            Intent intent = new Intent(this, DeliveryInfo.class);
+            //controllo se vanno aggiunti i flag come nel if sopra
+            startActivity(intent);
         }else{
             Toast.makeText(LoginActivity.this, "Login errato", Toast.LENGTH_LONG).show();
         }

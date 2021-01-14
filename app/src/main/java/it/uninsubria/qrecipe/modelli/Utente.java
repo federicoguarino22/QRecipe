@@ -22,6 +22,17 @@ public class Utente {
         this.tipo = tipo;
     }
 
+    public Utente(String email, String password, String name, String surname, String username, String phone, String tipo, String indirizzo) {
+        this.email = email;
+        this.password = password;
+        this.name = name;
+        this.surname = surname;
+        this.username = username;
+        this.phone = phone;
+        this.tipo = tipo;
+
+    }
+
     public String getTipo() {
         return tipo;
     }
@@ -65,6 +76,5 @@ public class Utente {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
 
 }
