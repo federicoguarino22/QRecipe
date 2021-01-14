@@ -20,7 +20,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Date;
 
 import it.uninsubria.qrecipe.modelli.Ordine;
-import it.uninsubria.qrecipe.modelli.Ricetta;
 
 public class DeliveryInfo extends AppCompatActivity {
 

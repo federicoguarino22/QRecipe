@@ -162,7 +162,7 @@ public class DeliveryDetails extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     for(IngredienteOrdine ingredients : ordine.getIngredienti()){
-                        if(listaIngredienti.contains(ingredients.getId())){
+                        if(listaIngredienti.contains(ingredients.getId()) && ingredients.getStato_consegna().equals("in_corso")){
                             snapshot.getRef().child(ingredients.toString()).child(ingredients.getStato_consegna()).setValue("consegnato");
                         }
                     }
