@@ -40,7 +40,6 @@ import it.uninsubria.qrecipe.modelli.Ordine;
 import it.uninsubria.qrecipe.modelli.Ricetta;
 
 public class DeliveryDetails extends AppCompatActivity {
-    private Ricetta ricetta = null;
     private Ordine ordine = null;
 
     @Override
@@ -51,7 +50,6 @@ public class DeliveryDetails extends AppCompatActivity {
         //dichiaro le istanze del layout
         final TextView orderId = findViewById(R.id.OrderID);
         final TextView prezzoTot = findViewById(R.id.PrezzoText);
-        final List<Double> prezzo = null;
         final Button consegna = findViewById(R.id.consegna);
         final ListView lista = findViewById(R.id.list_order_ingredients);
         final OrderDetailsAdapter ordineAdapter = new OrderDetailsAdapter(DeliveryDetails.this);
@@ -71,22 +69,21 @@ public class DeliveryDetails extends AppCompatActivity {
                 if(snapshot.exists()){
                     orderId.setText(orderID);
                     ordine = snapshot.getChildren().iterator().next().getValue(Ordine.class);
-                    ricetta = ordine.getRicetta();
-                    Query ingredienti = dbRef.child("");
+                    Query ingredienti = dbRef.child("ingredienti");
                     ingredienti.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            //scorro lista di ingredienti della ricetta
-                            for(IngredienteRicetta ingredienteRicetta: ricetta.getIngredienti()){
+                            //scorro lista di ingredienti dell'ordine
+                            for(IngredienteOrdine ingredienteOrdine: ordine.getIngredienti()){
                                 //restituisce l'ingrediente
-                                Ingrediente ingrediente= snapshot.child(ingredienteRicetta.getId()).getValue(Ingrediente.class);
+                                Ingrediente ingrediente= snapshot.child(ingredienteOrdine.getId()).getValue(Ingrediente.class);
                                 if(ingrediente!=null){
                                     //associa l'ingrediente all'ingrediente ricetta dell'adapter
-                                    ingredienteRicetta.setIngrediente(ingrediente);
-                                    ordineAdapter.add(ingredienteRicetta);
+                                    ingredienteOrdine.setIngrediente(ingrediente);
+                                    ordineAdapter.add(ingredienteOrdine);
                                 }
                                 else{
-                                    Log.w("DeliveryDetails", "Ingrediente nullo " + ingredienteRicetta.getId());
+                                    Log.w("DeliveryDetails", "Ingrediente nullo " + ingredienteOrdine.getId());
                                 }
 
                             }
@@ -113,15 +110,12 @@ public class DeliveryDetails extends AppCompatActivity {
             public void onClick(View v) {
                 double prezzoSomma = 0;
                 List<String> listaIngredienti = null;
-                for(IngredienteRicetta ingredients: ricetta.getIngredienti()) {
+                for(IngredienteOrdine ingredienteOrdine: ordine.getIngredienti()) {
                     CheckBox checkbox = lista.getFocusedChild().findViewById(R.id.checkBoxIngrediente);
                     if(checkbox.isChecked()){
-                        prezzo.add(ingredients.getIngrediente().getCosto()*ingredients.getQuantita());
-                        listaIngredienti.add(ingredients.getId());
+                        prezzoSomma += ingredienteOrdine.getIngrediente().getCosto()*ingredienteOrdine.getQuantita();
+                        listaIngredienti.add(ingredienteOrdine.getId());
                     }
-                }
-                for(Double x: prezzo) {
-                    prezzoSomma += x;
                 }
                 prezzoTot.setText(R.string.prezzo_ordine + " " + prezzoSomma);
                 double finalPrezzoSomma = prezzoSomma;

@@ -28,7 +28,7 @@ public class DeliveryInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery_info);
         String currentDateTimeString = java.text.DateFormat.getDateTimeInstance().format(new Date());
-        TextView date = findViewById(R.id.editTextDate);
+        TextView date = findViewById(R.id.Data);
         // textView is the TextView view that should display it
         date.setText(currentDateTimeString);
         final OrdineAdapter ordineAdapter= new OrdineAdapter(this);
@@ -37,7 +37,7 @@ public class DeliveryInfo extends AppCompatActivity {
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ordineRef = database.getReference();
-        Query ordineQuery =  ordineRef.child("ordine");
+        Query ordineQuery =  ordineRef.child("ordini");
         ordineQuery.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -45,7 +45,7 @@ public class DeliveryInfo extends AppCompatActivity {
                 for(DataSnapshot data:snapshot.getChildren()){
                     Ordine ordine =  data.getValue(Ordine.class);
                     if(ordine.getStato().equals("in_corso"))
-                    ordineAdapter.add(ordine);
+                         ordineAdapter.add(ordine);
                 }
             }
 
@@ -62,7 +62,7 @@ public class DeliveryInfo extends AppCompatActivity {
                 Ordine ordine = ordineAdapter.getItem(position);
                 //passare ai dettagli dell'ordine
                 Intent intent_ordine = new Intent(DeliveryInfo.this, DeliveryDetails.class);
-                intent_ordine.putExtra("ordineId", ordine.getId());
+                intent_ordine.putExtra("orderID", ordine.getId());
                 startActivity(intent_ordine);
             }
         });

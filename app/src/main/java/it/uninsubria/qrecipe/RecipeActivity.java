@@ -134,7 +134,7 @@ public class RecipeActivity  extends AppCompatActivity {
     private void acquista(){
         Ordine ordine = new Ordine();
         //setto gli elementi di ordine -necessaria modifica alla classe ordine ora ricetta è di tipo Ricetta (fatto)
-        ordine.setRicetta(ricetta);
+        ordine.setRicetta(ricetta.getId());
         ordine.setCliente("1");
         ordine.setData(new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date()));
         //creazione lista ingredienti e ciclo gli ingredienti
@@ -144,7 +144,9 @@ public class RecipeActivity  extends AppCompatActivity {
             //identifico id ingrediente della ricetta
             ingredienteOrdine.setId(ingredienteRicetta.getId());
             ingredienteOrdine.setStato_consegna("spedito");
+            ingredienteOrdine.setQuantita(ingredienteRicetta.getQuantita());
             ingredientiOrdine.add(ingredienteOrdine);
+
         }
         //settare gli ingredienti dell'ordine effettuato
         ordine.setIngredienti(ingredientiOrdine);

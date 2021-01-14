@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentSkipListSet;
 import it.uninsubria.qrecipe.modelli.IngredienteOrdine;
 import it.uninsubria.qrecipe.modelli.IngredienteRicetta;
 
-public class OrderDetailsAdapter extends ArrayAdapter<IngredienteRicetta> {
+public class OrderDetailsAdapter extends ArrayAdapter<IngredienteOrdine> {
     public OrderDetailsAdapter(@NonNull Context context) {
         super(context, 0);
     }
@@ -26,7 +26,7 @@ public class OrderDetailsAdapter extends ArrayAdapter<IngredienteRicetta> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         //getItem accede alla lista interna dell'array e restituisce la posizione
-        IngredienteRicetta ingrediente = getItem(position);
+        IngredienteOrdine ingrediente = getItem(position);
         if(convertView==null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.listitem_order_details, parent,false);
         }

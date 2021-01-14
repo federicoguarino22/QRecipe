@@ -6,23 +6,23 @@ import java.util.List;
 public class Ordine {
     private String id;
     private String data;
-    private Ricetta ricetta;
+    private String ricetta;
     private String cliente;
     private String indirizzo;
     private List<IngredienteOrdine> ingredienti;
-    private String stato;
+
 
     public Ordine() {
     }
 
-    public Ordine(String id, String data, Ricetta ricetta, String cliente, String indirizzo, List<IngredienteOrdine> ingredienti, String stato) {
+    public Ordine(String id, String data, String ricetta, String cliente, String indirizzo, List<IngredienteOrdine> ingredienti) {
         this.id = id;
         this.data = data;
         this.ricetta = ricetta;
         this.cliente = cliente;
         this.indirizzo = indirizzo;
         this.ingredienti = ingredienti;
-        this.stato = stato;
+
     }
 
     public String getId() {
@@ -41,11 +41,11 @@ public class Ordine {
         this.data = data;
     }
 
-    public Ricetta getRicetta() {
+    public String getRicetta() {
         return ricetta;
     }
 
-    public void setRicetta(Ricetta ricetta) {
+    public void setRicetta(String ricetta) {
         this.ricetta = ricetta;
     }
 
@@ -67,11 +67,14 @@ public class Ordine {
 
     public void setIngredienti(List<IngredienteOrdine> ingredienti) { this.ingredienti = ingredienti; }
 
-    public String getStato() {
+    public String getStato(){
+        String stato = "chiuso";
+        for(IngredienteOrdine ingredienteOrdine: this.ingredienti){
+            if(ingredienteOrdine.getStato_consegna().equals("spedito")){
+                stato = "in_corso";
+                break;
+            }
+        }
         return stato;
-    }
-
-    public void setStato(String stato) {
-        this.stato = stato;
     }
 }
