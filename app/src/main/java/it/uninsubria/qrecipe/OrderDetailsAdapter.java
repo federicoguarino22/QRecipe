@@ -33,11 +33,22 @@ public class OrderDetailsAdapter extends ArrayAdapter<IngredienteOrdine> {
         CheckBox ingredienteOrdine = (CheckBox) convertView.findViewById(R.id.checkBoxIngrediente);
         ingredienteOrdine.setText(ingrediente.getIngrediente().getNome());
 
-        TextView quantità = (TextView) convertView.findViewById(R.id.quantità);
-        quantità.setText(ingrediente.getQuantita() + " " +ingrediente.getIngrediente().getUnita_misura());
-
         TextView prezzoTot = (TextView) convertView.findViewById(R.id.prezzoPerQuantità);
-        prezzoTot.setText( (ingrediente.getQuantita()*ingrediente.getIngrediente().getCosto()) + " euro");
+        Double costo = ingrediente.getIngrediente().getCosto() * ingrediente.getQuantita();
+        //stampa ultimi due decimali, percentuale tutti i valori interi
+        String costo_stringa = String.format("%.2f", costo)+ " €";
+        prezzoTot.setText(costo_stringa);
+
+        TextView quantita = (TextView) convertView.findViewById(R.id.quantità);
+        Double dose = ingrediente.getQuantita();
+        String dose_stringa = "";
+        if(dose==0){
+            dose_stringa = "q.b";
+        }
+        else{
+            dose_stringa = String.format("%.2f", dose)+ ingrediente.getIngrediente().getUnita_misura();
+        }
+        quantita.setText(dose_stringa);
 
         return convertView;
     }

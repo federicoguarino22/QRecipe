@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/Data"
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"

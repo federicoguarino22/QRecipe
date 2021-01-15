@@ -101,3 +101,5 @@ public class Scanner extends AppCompatActivity {
         }).check();
     }
 }
+
+
