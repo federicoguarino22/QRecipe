@@ -61,7 +61,7 @@ public class DeliveryInfo extends AppCompatActivity {
                 //recupero ordine cliccato
                 Ordine ordine = ordineAdapter.getItem(position);
                 //passare ai dettagli dell'ordine
-                Intent intent_ordine = new Intent(DeliveryInfo.this, DeliveryDetails.class);
+                Intent intent_ordine = new Intent(DeliveryInfo.this, DeliveryScanner.class);
                 intent_ordine.putExtra("orderID", ordine.getId());
                 startActivity(intent_ordine);
             }
