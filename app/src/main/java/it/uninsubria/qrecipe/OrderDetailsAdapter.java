@@ -31,7 +31,13 @@ public class OrderDetailsAdapter extends ArrayAdapter<IngredienteOrdine> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.listitem_order_details, parent,false);
         }
         CheckBox ingredienteOrdine = (CheckBox) convertView.findViewById(R.id.checkBoxIngrediente);
-        ingredienteOrdine.setText(ingrediente.getIngrediente().getNome());
+        //checkbox non modificabile dall'utente
+        ingredienteOrdine.setClickable(false);
+        //se è consegnato verrà fuori la spunta
+        ingredienteOrdine.setChecked(ingrediente.getStato_consegna().equals("consegnato"));
+
+        TextView nome_ingrediente = (TextView) convertView.findViewById(R.id.nome);
+        nome_ingrediente.setText(ingrediente.getIngrediente().getNome());
 
         TextView prezzoTot = (TextView) convertView.findViewById(R.id.prezzoPerQuantità);
         Double costo = ingrediente.getIngrediente().getCosto() * ingrediente.getQuantita();

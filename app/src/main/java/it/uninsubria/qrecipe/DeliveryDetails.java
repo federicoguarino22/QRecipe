@@ -1,7 +1,6 @@
 package it.uninsubria.qrecipe;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +16,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.budiyev.android.codescanner.CodeScanner;
+import com.budiyev.android.codescanner.CodeScannerView;
+import com.budiyev.android.codescanner.DecodeCallback;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -25,19 +27,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.zxing.Result;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
-import java.util.concurrent.ConcurrentSkipListSet;
 
 import it.uninsubria.qrecipe.modelli.Ingrediente;
 import it.uninsubria.qrecipe.modelli.IngredienteOrdine;
-import it.uninsubria.qrecipe.modelli.IngredienteRicetta;
 import it.uninsubria.qrecipe.modelli.Ordine;
-import it.uninsubria.qrecipe.modelli.Ricetta;
 
 public class DeliveryDetails extends AppCompatActivity {
     private Ordine ordine = null;
@@ -49,7 +45,7 @@ public class DeliveryDetails extends AppCompatActivity {
 
         //dichiaro le istanze del layout
         final TextView orderId = findViewById(R.id.OrderID);
-        final TextView prezzoTot = findViewById(R.id.PrezzoText);
+        final TextView prezzoTot = findViewById(R.id.QRresult);
         final Button consegna = findViewById(R.id.consegna);
         final ListView lista = findViewById(R.id.list_order_ingredients);
         final OrderDetailsAdapter ordineAdapter = new OrderDetailsAdapter(DeliveryDetails.this);
@@ -85,9 +81,7 @@ public class DeliveryDetails extends AppCompatActivity {
                                 else{
                                     Log.w("DeliveryDetails", "Ingrediente nullo " + ingredienteOrdine.getId());
                                 }
-
                             }
-
                         }
 
                         @Override
@@ -103,42 +97,17 @@ public class DeliveryDetails extends AppCompatActivity {
                 // ...
             }
         });
-
+        //implementazione bottone consegna
         consegna.setOnClickListener(new View.OnClickListener() {
             @SuppressLint({"DefaultLocale", "SetTextI18n"})
             @Override
             public void onClick(View v) {
-                double prezzoSomma = 0;
-                List<String> listaIngredienti = null;
-                for(IngredienteOrdine ingredienteOrdine: ordine.getIngredienti()) {
-                    CheckBox checkbox = lista.getFocusedChild().findViewById(R.id.checkBoxIngrediente);
-                    if(checkbox.isChecked()){
-                        prezzoSomma += ingredienteOrdine.getIngrediente().getCosto()*ingredienteOrdine.getQuantita();
-                        listaIngredienti.add(ingredienteOrdine.getId());
-                    }
-                }
-                prezzoTot.setText(R.string.prezzo_ordine + " " + prezzoSomma);
-                double finalPrezzoSomma = prezzoSomma;
-
-                String messaggio = "sei sicuro di voler consegnare gli ingredienti selezionati? il prezzo è: ";
-                messaggio = messaggio + String.format("%.2f", finalPrezzoSomma)+ "€";
-                AlertDialog.Builder builder = new AlertDialog.Builder(DeliveryDetails.this);
-                builder.setMessage(messaggio)
-                        .setPositiveButton("consegna", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                consegna(listaIngredienti);
-                            }
-                        })
-                        .setNegativeButton("annulla", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-
-                            }
-                        });
-                //il messaggio sarà in base a cosa si clicca
-                AlertDialog dialog = builder.create();
-                dialog.show();
+               Intent intent_order =  new Intent(DeliveryDetails.this, DeliveryScanner.class);
+                intent_order.putExtra("orderId", ordine.getId());
+                startActivity(intent_order);
             }
         });
+
     }
     //funzione per consegnare gli ingredienti
     private void consegna(List<String> listaIngredienti){

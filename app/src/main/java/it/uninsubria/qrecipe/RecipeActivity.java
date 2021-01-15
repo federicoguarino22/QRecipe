@@ -149,6 +149,8 @@ public class RecipeActivity  extends AppCompatActivity {
 
         }
         //settare gli ingredienti dell'ordine effettuato
+        //campo indirizzo verificare che non sia vuoto
+        ordine.setIndirizzo("");
         ordine.setIngredienti(ingredientiOrdine);
 
         //salvare gli elementi sul db

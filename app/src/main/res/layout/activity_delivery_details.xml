@@ -15,39 +15,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/PrezzoText"
-        android:layout_width="43dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginBottom="80dp"
-        android:text="@string/prezzo_ordine"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/list_order_ingredients" />
-
     <Button
         android:id="@+id/consegna"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
         android:layout_marginBottom="20dp"
         android:text="Consegna"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/PrezzoText"
-        app:layout_constraintStart_toStartOf="@+id/PrezzoText"
-        app:layout_constraintTop_toBottomOf="@+id/list_order_ingredients" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ListView
         android:id="@+id/list_order_ingredients"
-        android:layout_width="411dp"
-        android:layout_height="534dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/consegna"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/OrderID">
 
     </ListView>
 

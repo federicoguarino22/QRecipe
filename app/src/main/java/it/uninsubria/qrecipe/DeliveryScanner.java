@@ -1,9 +1,11 @@
 package it.uninsubria.qrecipe;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +17,8 @@ import android.widget.Toast;
 import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.budiyev.android.codescanner.DecodeCallback;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -46,7 +50,6 @@ public class DeliveryScanner extends AppCompatActivity {
     Button consegna;
     String result = null;
     Ordine ordine = null;
-    ConcurrentSkipListSet<String> ingredients = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,18 +82,65 @@ public class DeliveryScanner extends AppCompatActivity {
 
         //restituisce l'intent con cui è stata chiamata l'activity
         Intent intent = getIntent();
-        String ordineId = intent.getStringExtra("ordineId");
+        String ordineId = intent.getStringExtra("orderId");
 
         consegna = findViewById(R.id.ConsegnaQrCode);
         consegna.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                IngredienteOrdine ingrediente = null;
                 if(result!=null){
-                    //apre il dettaglio degli ingredienti
-                    Intent intent_ingredient = new Intent(DeliveryScanner.this, DeliveryDetails.class);
-                    intent_ingredient.putExtra("orderID", result);
-                    startActivity(intent_ingredient);
-                    finish();
+                    //trovare ingrediente cercato
+                    for(IngredienteOrdine ingredienteOrdine: ordine.getIngredienti()){
+                        if(ingredienteOrdine.getId().equals(result)){
+                            ingrediente = ingredienteOrdine;
+                            break;
+                        }
+                    }
+                }
+                //verifico che ingrediente non sia nulla e che lo stato non sia consegnato
+                if(ingrediente!=null){
+                    if(ingrediente.getStato_consegna().equals("consegnato")){
+                        Toast.makeText(DeliveryScanner.this, "Ingrediente già consegnato", Toast.LENGTH_LONG).show();
+                    }
+                    else{
+                        final IngredienteOrdine ingredienteConsegna = ingrediente;
+                        AlertDialog.Builder builder = new AlertDialog.Builder(DeliveryScanner.this);
+                        builder.setTitle("consegna ingrediente");
+                        builder.setMessage("sei sicuro di voler consegnare l'ingrediente "+ingrediente.getIngrediente().getNome());
+                        builder.setPositiveButton("consegna", new DialogInterface.OnClickListener(){
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                ingredienteConsegna.setStato_consegna("consegnato");
+
+                                //salvare gli elementi sul db
+                                final FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                DatabaseReference ordineRef = database.getReference();
+                                Task<Void> task = ordineRef.child("ordini").child(ordine.getId()).setValue(ordine);
+                                //per aggiungere l'evento
+                                task.addOnCompleteListener(DeliveryScanner.this, new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Toast.makeText(DeliveryScanner.this, "Consegna avvenuta con successo", Toast.LENGTH_LONG).show();
+                                        //faccio il back per ritornare nella schermata precedente, finita la parte dell'ordine
+                                        DeliveryScanner.this.finish();
+                                    }
+                                });
+
+                            }
+                        });
+
+                        builder.setNegativeButton("annulla", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                        //crea istanza del dialog e fa vedere dialog a schermo con .show
+                        AlertDialog dialog = builder.create();
+                        dialog.show();
+                    }
+
                 }
                 else{
                     Toast.makeText(DeliveryScanner.this, "QRCode non identificato", Toast.LENGTH_SHORT).show();
@@ -100,27 +150,29 @@ public class DeliveryScanner extends AppCompatActivity {
 
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference orderRef = database.getReference();
-        Query userQuery = orderRef.child("ordini").orderByChild("id").equalTo(ordineId);
-        userQuery.addValueEventListener(new ValueEventListener() {
+        DatabaseReference dbRef = database.getReference();
+        Query orderQuery = dbRef.child("ordini").orderByChild("id").equalTo(ordineId);
+        orderQuery.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()) {
-                    ordine = dataSnapshot.getChildren().iterator().next().getValue(Ordine.class);
-                    DatabaseReference ingredientsRef = database.getReference();
-                    Query userQuery = ingredientsRef.child("ingredienti");
-                    userQuery.addValueEventListener(new ValueEventListener(){
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    ordine = snapshot.getChildren().iterator().next().getValue(Ordine.class);
+                    Query ingredienti = dbRef.child("ingredienti");
+                    ingredienti.addValueEventListener(new ValueEventListener() {
                         @Override
-                        //
-                        public void onDataChange(DataSnapshot dataSnapshot){
-                            if(dataSnapshot.exists()){
-                                for (IngredienteOrdine x : ordine.getIngredienti()){
-
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            //scorro lista di ingredienti dell'ordine
+                            for(IngredienteOrdine ingredienteOrdine: ordine.getIngredienti()){
+                                //restituisce l'ingrediente
+                                Ingrediente ingrediente= snapshot.child(ingredienteOrdine.getId()).getValue(Ingrediente.class);
+                                if(ingrediente!=null){
+                                    ingredienteOrdine.setIngrediente(ingrediente);
                                 }
                             }
                         }
+
                         @Override
-                        public void onCancelled(DatabaseError databaseError) {
+                        public void onCancelled(@NonNull DatabaseError error) {
                             // ...
                         }
                     });
@@ -128,7 +180,7 @@ public class DeliveryScanner extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError error) {
                 // ...
             }
         });
