@@ -1,7 +1,9 @@
 package it.uninsubria.qrecipe;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -61,6 +63,9 @@ public class LoginActivity extends AppCompatActivity {
     /** Called when the user taps the Send button */
 
     private void login(String email, String pwd) {
+        //sharepreferences si identifica per il nome, sono condivise da tutte le applicazioni,ho messo il nome completo dell'app per evitare conflitti
+        final SharedPreferences preferences = getApplicationContext().getSharedPreferences("it.uninsubria.qrecipe.preferences", Context.MODE_PRIVATE);
+
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference usersRef = database.getReference();
 
@@ -74,6 +79,10 @@ public class LoginActivity extends AppCompatActivity {
                     Utente u = dataSnapshot.getChildren().iterator().next().getValue(Utente.class);
                     tipoUtente = u.getTipo();
                     if(u.getPassword().equals(pwd)) {
+                        //edit da oggetto editor
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("userId", u.getId());
+                        editor.apply();
                         loggedIn = true;
                     }
                 }

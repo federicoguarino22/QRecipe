@@ -63,7 +63,6 @@ public class RegisterActivity extends AppCompatActivity {
     //funzione che effettua effettivamente la registrazione
     private void register(String name, String surname, String username, String phone, String email, String pwd, int idTipo) {
 
-
         //identifica utente o corriere
         String tipo = "";
         if(idTipo==R.id.utente){
@@ -73,8 +72,6 @@ public class RegisterActivity extends AppCompatActivity {
             tipo = "corriere";
         }
         //registrazione utente
-        //creo istanza oggetto utente
-        Utente utente = new Utente(email, pwd, name, surname, username, phone, tipo);
 
         //salvare gli elementi sul db
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -83,6 +80,8 @@ public class RegisterActivity extends AppCompatActivity {
         DatabaseReference pushedRef = usersRef.child("utenti").push();
         //oggetto task
         String userId = pushedRef.getKey();
+        //creo istanza oggetto utente
+        Utente utente = new Utente(email, pwd, name, surname, username, phone, tipo, userId);
         Task <Void> task = usersRef.child("utenti").child(userId).setValue(utente);
         //per aggiungere l'evento
         task.addOnCompleteListener(this, new OnCompleteListener<Void>() {
@@ -93,9 +92,8 @@ public class RegisterActivity extends AppCompatActivity {
                 RegisterActivity.this.finish();
             }
         });
-
-
     }
+
     //validare l'input inserito dall'utente
     private boolean validate(String email, String pwd, String name, String surname, String username, String phone, String confermapwd) {
         //se la pwd è diversa dalla sua conferma allora restituirà false
@@ -117,10 +115,7 @@ public class RegisterActivity extends AppCompatActivity {
         if(phone== null || phone.isEmpty()){
             return false;
         }
-        
         return true;
-
-
     }
 
     private void control_register(String name, String surname, String username, String phone, String email, String pwd, int idTipo) {

@@ -41,6 +41,8 @@ public class DeliveryInfo extends AppCompatActivity {
         ordineQuery.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //evita i duplicati
+                ordineAdapter.clear();
                 //scorrere tutti gli ordini per prendere il valore
                 for(DataSnapshot data:snapshot.getChildren()){
                     Ordine ordine =  data.getValue(Ordine.class);

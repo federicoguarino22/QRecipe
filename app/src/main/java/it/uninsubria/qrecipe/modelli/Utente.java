@@ -8,11 +8,12 @@ public class Utente {
     private String username;
     private String phone;
     private String tipo;
+    private String id;
 
     public Utente(){
     }
 
-    public Utente(String email, String password, String name, String surname, String username, String phone, String tipo) {
+    public Utente(String email, String password, String name, String surname, String username, String phone, String tipo, String id) {
         this.email = email;
         this.password = password;
         this.name = name;
@@ -20,8 +21,16 @@ public class Utente {
         this.username = username;
         this.phone = phone;
         this.tipo = tipo;
+        this.id = id;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getTipo() {
         return tipo;

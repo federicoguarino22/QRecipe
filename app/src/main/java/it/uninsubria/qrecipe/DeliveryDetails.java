@@ -63,6 +63,8 @@ public class DeliveryDetails extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
+                    //quando cambia l'ordine pulisce l'adapter e lo ricrea
+                    ordineAdapter.clear();
                     orderId.setText(orderID);
                     ordine = snapshot.getChildren().iterator().next().getValue(Ordine.class);
                     Query ingredienti = dbRef.child("ingredienti");

@@ -16,7 +16,7 @@
         app:layout_constraintStart_toEndOf="@+id/recipe_image"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <it.uninsubria.qrecipe.UrlImageView
+    <ImageView
         android:id="@+id/recipe_image"
         android:layout_width="100dp"
         android:layout_height="100dp"

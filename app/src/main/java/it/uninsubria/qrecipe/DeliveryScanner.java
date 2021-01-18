@@ -98,6 +98,10 @@ public class DeliveryScanner extends AppCompatActivity {
                         }
                     }
                 }
+                else{
+                    Toast.makeText(DeliveryScanner.this, "QRCode non identificato", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 //verifico che ingrediente non sia nulla e che lo stato non sia consegnato
                 if(ingrediente!=null){
                     if(ingrediente.getStato_consegna().equals("consegnato")){
@@ -143,7 +147,7 @@ public class DeliveryScanner extends AppCompatActivity {
 
                 }
                 else{
-                    Toast.makeText(DeliveryScanner.this, "QRCode non identificato", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DeliveryScanner.this, "Ingrediente non riconosciuto", Toast.LENGTH_SHORT).show();
                 }
             }
         });

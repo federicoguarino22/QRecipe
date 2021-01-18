@@ -15,6 +15,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.squareup.picasso.Picasso;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -38,12 +40,11 @@ public class RecipeAdapter extends ArrayAdapter<Ricetta> {
         }
         TextView name = (TextView)convertView.findViewById(R.id.recipe_name);
         name.setText(ricetta.getNome());
-        UrlImageView image = (UrlImageView)convertView.findViewById(R.id.recipe_image);
-        try {
-            image.setImageURL(new URL(ricetta.getImmagine()));
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+
+        ImageView image = convertView.findViewById(R.id.recipe_image);
+        //dalla libreria Picasso, prende l'URL dell'immagine, scarica l'immagine e la mette nell'imageview
+        Picasso.get().load(ricetta.getImmagine()).into(image);
+
         return convertView;
     }
 

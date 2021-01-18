@@ -1,16 +1,16 @@
 package it.uninsubria.qrecipe;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Address;
-import android.location.Geocoder;
-import android.location.Location;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -47,24 +47,18 @@ import it.uninsubria.qrecipe.modelli.Ricetta;
 public class RecipeActivity extends AppCompatActivity {
 
     private Ricetta ricetta = null;
-    FusedLocationProviderClient fusedLocationProviderClient;
-    TextView ClientAddress;
-    Button Location;
+    EditText ClientAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ricetta);
 
-        //inizializzo fusedLocationProviderClient
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-
         //dichiaro le istanze del layout
         final TextView name_ricetta = findViewById(R.id.name_ricetta);
         final ListView listaingredienti = findViewById(R.id.list_ingredients);
         final IngredientsAdapter ingredientsAdapter = new IngredientsAdapter(RecipeActivity.this);
         ClientAddress = findViewById(R.id.IndirizzoCliente);
-        Location = findViewById(R.id.getLocation);
         //assoccia l'adpter con la listview
         listaingredienti.setAdapter(ingredientsAdapter);
 
@@ -124,6 +118,10 @@ public class RecipeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // check indirizzo
+                if(TextUtils.isEmpty(ClientAddress.getText().toString())){
+                    Toast.makeText(RecipeActivity.this, "Indirizzo non valido", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 String messaggio = "sei sicuro di voler acquistare gli ingredienti ad un costo di: ";
                 double costo = 0;
                 //ciclo gli ingredienti della ricetta e ricavo il costo totale
@@ -149,56 +147,18 @@ public class RecipeActivity extends AppCompatActivity {
             }
         });
 
-        Location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // controllo i permessi
-                if (ActivityCompat.checkSelfPermission(RecipeActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                    getLocation();
-                } else {
-                    ActivityCompat.requestPermissions(RecipeActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
-                }
-            }
-        });
-    }
 
-    private void getLocation() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        fusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
-            @Override
-            public void onComplete(@NonNull Task<Location> task) {
-                Location location = task.getResult();
-
-                if (location != null) {
-                    try {
-                        Geocoder geocoder = new Geocoder(RecipeActivity.this, Locale.getDefault());
-                        List<Address> adresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-                        ClientAddress.setText(adresses.get(0).getAddressLine(0));
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-            }
-        });
     }
 
 
     //funzione per acquistare gli ingredienti
     private void acquista(){
+        //sharepreferences si identifica per il nome, sono condivise da tutte le applicazioni,ho messo il nome completo dell'app per evitare conflitti
+        final SharedPreferences preferences = getApplicationContext().getSharedPreferences("it.uninsubria.qrecipe.preferences", Context.MODE_PRIVATE);
         Ordine ordine = new Ordine();
-        //setto gli elementi di ordine -necessaria modifica alla classe ordine ora ricetta è di tipo Ricetta (fatto)
+        //setto gli elementi di ordine
         ordine.setRicetta(ricetta.getId());
-        ordine.setCliente("1");
+        ordine.setCliente(preferences.getString("userId", "1"));
         ordine.setData(new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date()));
         //creazione lista ingredienti e ciclo gli ingredienti
         List<IngredienteOrdine> ingredientiOrdine = new ArrayList<IngredienteOrdine>();
@@ -212,8 +172,8 @@ public class RecipeActivity extends AppCompatActivity {
 
         }
         //settare gli ingredienti dell'ordine effettuato
-        //campo indirizzo verificare che non sia vuoto
-        ordine.setIndirizzo("");
+        //campo indirizzo
+        ordine.setIndirizzo(ClientAddress.getText().toString());
         ordine.setIngredienti(ingredientiOrdine);
 
         //salvare gli elementi sul db
