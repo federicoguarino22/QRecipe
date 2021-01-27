@@ -1,0 +1,793 @@
+{
+
+
+		"acqua":{
+			"nome": "acqua",			
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"farina":{
+			"nome": "farina",
+			"unita_misura": "g",
+			"costo": 0.015
+		},
+		"lievito":{
+			"nome": "lievito di birra",
+			"unita_misura": "g",
+			"costo": 0.006
+		},
+		"sale":{
+			"nome": "sale fino",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"pepe":{
+			"nome": "pepe nero",
+			"unita_misura": "g",
+			"costo": 0.009
+		},
+		"strutto":{
+			"nome": "strutto",
+			"unita_misura": "g",
+			"costo": 0.008
+		},
+		"olio":{
+			"nome": "olio extravergine d'oliva",
+			"unita_misura": "g",
+			"costo": 0.004
+		},
+		"salame":{
+			"nome": "salame napoletano",
+			"unita_misura": "g",
+			"costo": 0.013
+		},
+		"pecorino":{
+			"nome": "pecorino",
+			"unita_misura": "g",
+			"costo": 0.006
+		},
+		"uovo":{
+			"nome": "uovo",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"zafferano":{
+			"nome": "zafferano",
+			"unita_misura": "g",
+			"costo": 0.015
+		},
+		"burro":{
+			"nome": "burro",
+			"unita_misura": "g",
+			"costo": 0.0045			
+		},
+		"riso":{
+			"nome": "riso vialone nano",
+			"unita_misura": "g",
+			"costo": 0.003
+		},
+		"caciocavallo":{
+			"nome": "caciocavallo",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"cipolle":{
+			"nome": "cipolle",
+			"unita_misura": "g",
+			"costo": 0.03
+		},
+		"maiale_macinato":{
+			"nome": "maiale macinato",
+			"unita_misura": "g",
+			"costo": 0.007
+		},
+		"passata_pomodoro":{
+			"nome": "passata di pomodoro",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"piselli":{
+			"nome": "piselli",
+			"unita_misura": "g",
+			"costo": 0.004
+		},
+		"vino_rosso":{
+			"nome": "vino rosso",
+			"unita_misura": "g",
+			"costo": 0.003
+		},
+		"prosciuttocotto":{
+			"nome": "prosciutto cotto",
+			"unita_misura": "g",
+			"costo": 0.009
+		},
+		"mozzarella":{
+			"nome": "mozzarella",
+			"unita_misura": "g",
+			"costo": 0.015
+		},
+		"farina00":{
+			"nome": "farina 00",
+			"unita_misura": "g",
+			"costo": 0.0015
+		},
+		"pangrattato":{
+			"nome": "pangrattato",
+			"unita_misura": "g",
+			"costo": 0.003
+		},
+		"oliosemi":{
+			"nome": "olio di semi",
+			"unita_misura": "g",
+			"costo": 0.0018
+		},
+		"zucchero":{
+			"nome": "zucchero",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"origano":{
+			"nome": "origano",
+			"unita_misura": "g",
+			"costo": 0.009
+		},		
+		"pomodori_pelati":{
+			"nome": "pomodori pelati",
+			"unita_misura": "g",
+			"costo": 0.004
+		},
+		"basilico":{
+			"nome": "basilico",
+			"unita_misura": "g",
+			"costo": 0.0035
+		},
+		"aglio":{
+			"nome": "aglio",
+			"unita_misura": "g",
+			"costo": 0.009
+		},
+		"grana_padano":{
+			"nome": "grana padano",
+			"unita_misura": "g",
+			"costo": 0.008
+		},
+		"oliosemi_arachide":{
+			"nome": "olio di semi di arachide",
+			"unita_misura": "g",
+			"costo": 0.007
+		},
+		"petto_di_pollo":{
+			"nome": "petto di pollo",
+			"unita_misura": "g",
+			"costo": 0.009
+		
+		},
+		"pane":{
+			"nome": "pane",
+			"unita_misura": "g",
+			"costo": 0.003
+		},
+		"cipollebianche":{
+			"nome": "cipolle bianche",
+			"unita_misura": "g",
+			"costo": 0.0012			
+		},
+		"senape":{
+			"nome":"senape di Digione",
+			"unita_misura": "g",
+			"costo": 0.0025
+		},
+		"latteintero":{
+			"nome": "latte intero",
+			"unita_misura": "g",
+			"costo": 0.0012
+		},
+		"patatelesse":{
+			"nome": "patate lesse",
+			"unita_misura": "g",
+			"costo": 0.0055
+		},
+		"parmigianoreggiano":{
+			"nome": "parmigiano reggiano",
+			"unita_misura": "g",
+			"costo": 0.010
+		},
+		"prezzemolo":{
+			"nome": "prezzemolo",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"pastasfoglia":{
+			"nome": "pasta sfoglia",
+			"unita_misura": "g",
+			"costo": 0.008
+		},
+		"nocemoscata":{
+			"nome": "noce moscata",
+			"unita_misura": "g",
+			"costo": 0.049
+		},
+		"filettosalmone":{
+			"nome": "filetto di salmone",
+			"unita_misura":"g",
+			"costo": 0.042
+		},
+		"zenzero":{
+			"nome": "zenzero",
+			"unita_misura": "g",
+			"costo": 0.005
+		},
+		"scorzalimone":{
+			"nome": "scorza di limone",
+			"unita_misura": "g",
+			"costo": 0.004
+		},
+		"tabasco":{
+			"nome": "tabasco",
+			"unita_misura": "g",
+			"costo": 0.003
+		},
+		"erbacipollina":{
+			"nome": "erba cipollina",
+			"unita_misura": "g",
+			"costo": 0.1
+		},
+		"acetodiriso":{
+			"nome": "aceto di riso",
+			"unita_misura": "g",
+			"costo": 0.01
+		},
+		"mandorlescaglie":{
+			"nome": "mandorle in scaglie",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"avocado":{
+			"nome": "avocado",
+			"unita_misura": "g",
+			"costo": 0.01
+		},
+		"pomodoripiccadilly":{
+			"nome": "pomodori piccadilly",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"mandorle":{
+			"nome": "mandorle",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"lievitopreparazionisalate":{
+			"nome": "lievito istantaneo per preparazioni salate",
+			"unita_misura": "g",
+			"costo": 0.024
+		},
+		"farinaceci":{
+			"nome": "farina di ceci",
+			"unita_misura": "g",
+			"costo": 0.005
+		},
+		"paninisesamo":{
+			"nome": "panini di sesamo",
+			"unita_misura": "g",
+			"costo": 0.004
+		
+		},
+		"spaghetti":{
+			"nome": "spaghetti",
+			"unita_misura": "g",
+			"costo": 0.0025
+		},
+		"guanciale":{
+			"nome": "guanciale",
+			"unita_misura": "g",
+			"costo": 0.016
+		},
+		"pecorinoromano":{
+			"nome": "pecorino romano",
+			"unita_misura": "g",
+			"costo": 0.006
+		},
+		"vino_bianco":{
+			"nome": "vino bianco",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"pepenerograni":{
+			"nome": "pepe nero in grani",
+			"unita_misura": "g",
+			"costo": 0.009
+		},
+		"semolagranoduro":{
+			"nome": "semola di grano duro rimacinata",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"spinaci":{
+			"nome": "spinaci",
+			"unita_misura": "g",
+			"costo": 0.005
+		},
+		"tuorli":{
+			"nome": "tuorli",
+			"unita_misura": "g",
+			"costo": 0.006
+		},
+		"carnebovina": {
+			"nome": "carne bovina",
+			"unita_misura": "g",
+			"costo": 0.008
+		},
+		"pancetta": {
+			"nome": "pancetta",
+			"unita_misura": "g",
+			"costo": 0.008
+		},
+		"carote": {
+			"nome": "carote",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"sedano": {
+			"nome": "sedano",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"cipolledorate": {
+			"nome": "cipolle dorate",
+			"unita_misura": "g",
+			"costo": 0.0018
+		},
+		"brodovegetale": {
+			"nome": "brodo vegetale",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"vongole": {
+			"nome": "vongole",
+			"unita_misura": "g",
+			"costo": 0.011
+		},
+		"salegrosso": {
+			"nome": "sale grosso",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"farinagranosaraceno": {
+			"nome": "farina di grano saraceno",
+			"unita_misura": "g",
+			"costo": 0.005
+		},
+		"farina0": {
+			"nome": "farina 0",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"formaggiolatteria": {
+			"nome": "formaggio latteria",
+			"unita_misura": "g",
+			"costo": 0.007
+		},
+		"granapadadano": {
+			"nome": "grana padano",
+			"unita_misura": "g",
+			"costo": 0.007
+		},
+		"patate": {
+			"nome": "patate",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"verza": {
+			"nome": "verza",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"capperisottosale": {
+			"nome": "capperi sotto sale",
+			"unita_misura": "g",
+			"costo": 0.004
+		},
+		"acciughesttolio": {
+			"nome": "acciughe sott'olio",
+			"unita_misura": "g",
+			"costo": 0.004
+		},
+		"olive_gaeta": {
+			"nome": "olive di gaeta",
+			"unita_misura": "g",
+			"costo": 0.003
+		},
+		"peperoncino_secco": {
+			"nome": "peperoncino secco",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"ditaloni_rigati": {
+			"nome": "ditaloni rigati",
+			"unita_misura": "g",
+			"costo": 0.003
+		},
+		"fagioli_borlottisecchi": {
+			"nome": "fagioli borlotti secchi",
+			"unita_misura": "g",
+			"costo": 0.008
+		},
+		"lardo": {
+			"nome": "lardo",
+			"unita_misura": "g",
+			"costo": 0.012
+		},
+		"prosciuttocrudo": {
+			"nome": "prosciutto crudo",
+			"unita_misura": "g",
+			"costo": 0.012
+		},
+		"rosmarino": {
+			"nome": "rosmarino",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"alloro": {
+			"nome": "alloro",
+			"unita_misura": "g",
+			"costo": 0.0081
+		},
+		"tagliatelle_uovo": {
+			"nome": "tagliatelle all'uovo",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"manzo": {
+			"nome": "manzo",
+			"unita_misura": "g",
+			"costo": 0.009
+		},
+		"salsiccia": {
+			"nome": "salsiccia",
+			"unita_misura": "g",
+			"costo": 0.008
+		},
+		"salvia": {
+			"nome": "salvia",
+			"unita_misura": "g",
+			"costo": 0.036
+		},
+		"peperoncino_fresco": {
+			"nome": "peperoncino fresco",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"mezzepenne_rigateintegrali": {
+			"nome": "mezze penne rigate integrali",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"pannafresca_liquida": {
+			"nome": "panna fresca liquida",
+			"unita_misura": "g",
+			"costo": 0.005
+		},
+		"melanzaneovali_nere": {
+			"nome": "melanzane ovali nere",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"fiordilatte": {
+			"nome": "melanzane ovali nere",
+			"unita_misura": "g",
+			"costo": 0.02
+		},
+		"pane_raffermo": {
+			"nome": "pane raffermo",
+			"unita_misura": "g",
+			"costo": 0.0015
+		},
+		"patata_pastagialla": {
+			"nome": "patate a pasta gialla",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"peperoni": {
+			"nome": "peperoni",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"vitello": {
+			"nome": "vitello",
+			"unita_misura": "g",
+			"costo": 0.02
+		},
+		"yogurt_greco": {
+			"nome": "yogurt greco",
+			"unita_misura": "g",
+			"costo": 0.009
+		},
+		"pepe_cayenna": {
+			"nome": "pepe di Cayenna",
+			"unita_misura": "g",
+			"costo": 0.07
+		},
+		"curcuma_polvere": {
+			"nome": "curcuma in polvere",
+			"unita_misura": "g",
+			"costo": 0.009
+		},
+		"paprika_affumicata": {
+			"nome": "paprika affumicata",
+			"unita_misura": "g",
+			"costo": 0.132
+		},
+		"cannella_polvere": {
+			"nome": "cannella in polvere",
+			"unita_misura": "g",
+			"costo": 0.004
+		},
+		"cumino": {
+			"nome": "cumino",
+			"unita_misura": "g",
+			"costo": 0.025
+		},
+		"semi_coriandolo": {
+			"nome": "semi di coriandolo",
+			"unita_misura": "g",
+			"costo": 0.019
+		},
+		"zenzero_fresco": {
+			"nome": "zenzero fresco",
+			"unita_misura": "g",
+			"costo": 0.008
+		},
+		"coriandolo_fresco": {
+			"nome": "coriandolo fresco",
+			"unita_misura": "g",
+			"costo": 0.6
+		},
+		"riso_basmati": {
+			"nome": "riso basmati",
+			"unita_misura": "g",
+			"costo": 0.007
+		},
+		"cannella_stecche": {
+			"nome": "cannella in stecche",
+			"unita_misura": "g",
+			"costo": 0.0014
+		},
+		"cardamomo": {
+			"nome": "cardamomo",
+			"unita_misura": "g",
+			"costo": 0.06
+		},
+		"anice_stellato": {
+			"nome": "anice stellato",
+			"unita_misura": "g",
+			"costo": 0.06
+		},
+		"fettine_vitello": {
+			"nome": "fettine di vitello",
+			"unita_misura": "g",
+			"costo": 0.012
+		},
+		"limone": {
+			"nome": "limone",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"amido_mais": {
+			"nome": "amido di mais",
+			"unita_misura": "g",
+			"costo": 0.0024
+		},
+		"luganega": {
+			"nome": "luganega",
+			"unita_misura": "g",
+			"costo": 0.009
+		},
+		"polpo": {
+			"nome": "polpo",
+			"unita_misura": "g",
+			"costo": 0.018
+		},
+		"succo_limone": {
+			"nome": "succo di limone",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"savoiardi": {
+			"nome": "savoiardi",
+			"unita_misura": "g",
+			"costo": 0.0035
+		},
+		"mascarpone": {
+			"nome": "mascarpone",
+			"unita_misura": "g",
+			"costo": 0.01
+		},
+		"caffe": {
+			"nome": "caffè della moka",
+			"unita_misura": "g",
+			"costo": 0.008
+		},
+		"cacaoamaro": {
+			"nome": "cacao amaro in polvere",
+			"unita_misura": "g",
+			"costo": 0.006
+		},
+		"cioccolatofondente": {
+			"nome": "cioccolato fondente",
+			"unita_misura": "g",
+			"costo": 0.008
+		},
+		"zuccherovelo": {
+			"nome": "zucchero a velo",
+			"unita_misura": "g",
+			"costo": 0.003
+		},
+		"baccellovaniglia": {
+			"nome": "baccello di vaniglia",
+			"unita_misura": "g",
+			"costo": 1.5
+		},
+		"zuccherocanna": {
+			"nome": "zucchero di canna",
+			"unita_misura": "g",
+			"costo": 0.003
+		},
+		"nutella": {
+			"nome": "nutella",
+			"unita_misura": "g",
+			"costo": 0.011
+		},
+		"granellanocciole": {
+			"nome": "granella di nocciole",
+			"unita_misura": "g",
+			"costo": 0.014
+		},
+		"nocciolespellate": {
+			"nome": "nocciole intere spellate",
+			"unita_misura": "g",
+			"costo": 0.010
+		},
+		"farinamanitoba": {
+			"nome": "farina manitoba",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"mieleacacia": {
+			"nome": "miele di acacia",
+			"unita_misura": "g",
+			"costo": 0.01
+		},
+		"lievitidolci": {
+			"nome": "lievito in polvere per dolci",
+			"unita_misura": "g",
+			"costo": 0.011
+		},
+		"bicarbonato": {
+			"nome": "bicarbonato",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"cioccolatofondente60": {
+			"nome": "cioccolato fondente al 60%",
+			"unita_misura": "g",
+			"costo": 0.008
+		},
+		"albumi": {
+			"nome": "albumi",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"confetturaalbicocche": {
+			"nome": "confettura di albicocche",
+			"unita_misura": "g",
+			"costo": 0.017
+		},
+		"fragole": {
+			"nome": "fragole",
+			"unita_misura": "g",
+			"costo": 0.006
+		},
+		"burrocacao": {
+			"nome": "burro di cacao",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"amarenesciroppate": {
+			"nome": "amarene sciroppate",
+			"unita_misura": "g",
+			"costo": 0.015
+		},
+		"biscottisecchi": {
+			"nome": "biscotti secchi",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"rum": {
+			"nome": "rum",
+			"unita_misura": "g",
+			"costo": 0.017
+		},
+		"granellazucchero": {
+			"nome": "granella di zucchero",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"fiocchisale": {
+			"nome": "fiocchi di sale",
+			"unita_misura": "g",
+			"costo": 0.001
+		},
+		"farinamandorle": {
+			"nome": "farina di mandorle",
+			"unita_misura": "g",
+			"costo": 0.010
+		},
+		"cioccolatobianco": {
+			"nome": "cioccolato bianco",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"pastapistacchi": {
+			"nome": "pasta di pistacchi",
+			"unita_misura": "g",
+			"costo": 0.056
+		},
+		"granellapistacchi": {
+			"nome": "granella di pistacchi",
+			"unita_misura": "g",
+			"costo": 0.003
+		},
+		"fruttiboscodis": {
+			"nome": "frutti di bosco disidratati",
+			"unita_misura": "g",
+			"costo": 0.018
+		},
+		"lamponi": {
+			"nome": "lamponi",
+			"unita_misura": "g",
+			"costo": 0.018
+		},
+		"gelatinafogli": {
+			"nome": "gelatina in fogli",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"fruttibosco": {
+			"nome": "frutti di bosco",
+			"unita_misura": "g",
+			"costo": 0.01
+		},
+		"menta": {
+			"nome": "menta",
+			"unita_misura": "g",
+			"costo": 0.002
+		},
+		"essenzavaniglia": {
+			"nome": "essenza di vaniglia",
+			"unita_misura": "g",
+			"costo": 0.002
+		}
+						
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

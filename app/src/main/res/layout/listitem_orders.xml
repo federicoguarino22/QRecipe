@@ -9,9 +9,9 @@
         android:id="@+id/iconaOrdine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="15dp"
         android:src="@android:drawable/ic_menu_directions"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,35 +19,28 @@
         android:id="@+id/iconaMappa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="10dp"
         android:src="@android:drawable/ic_dialog_map"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Indirizzo"
-        app:layout_constraintStart_toEndOf="@+id/idOrdine"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Indirizzo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/iconaMappa"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iconaMappa"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/idOrdine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="23dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/iconaOrdine"
-        app:layout_constraintEnd_toStartOf="@+id/iconaMappa"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iconaOrdine"
-        app:layout_constraintTop_toTopOf="@+id/iconaOrdine" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

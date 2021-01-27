@@ -1,0 +1,2353 @@
+{
+	
+		"1":{
+			"id": "1",
+			"nome": "Casatiello napoletano",
+			"ingredienti": [{
+				"id": "acqua",
+				"quantita": 375			
+			},
+			{
+				"id": "farina",
+				"quantita": 650				
+			},
+			{
+				"id": "lievito",
+				"quantita": 10			
+			},
+			{
+				"id": "sale",
+				"quantita": 15
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "strutto",
+				"quantita": 25
+			},
+			{
+				"id": "olio",
+				"quantita": 25
+			},
+			{
+				"id": "salame",
+				"quantita": 150
+			},
+			{
+				"id": "pecorino",
+				"quantita": 150
+			},
+			{
+				"id": "uovo",
+				"quantita": 4
+			}],
+			"link": "https://ricette.giallozafferano.it/Casatiello-napoletano.html",
+			"immagine": "https://www.giallozafferano.it/images/171-17145/Casatiello-napoletano_450x300.jpg"
+			
+		},
+		"2":{
+			"id": "2",
+			"nome":"Arancini di riso",
+			"ingredienti": [{
+				"id": "zafferano",
+				"quantita": 125
+			},
+			{
+				"id": "burro",
+				"quantita": 55
+			},
+			{
+				"id": "riso",
+				"quantita": 500
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "acqua",
+				"quantita": 1500
+			},
+			{
+				"id": "caciocavallo",
+				"quantita": 150
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "cipolle",
+				"quantita": 500
+			},
+			{
+				"id": "maiale_macinato",
+				"quantita": 100
+			},
+			{
+				"id": "olio",
+				"quantita": 0
+			},
+			{
+				"id": "passata_pomodoro",
+				"quantita": 250
+			},
+			{
+				"id": "piselli",
+				"quantita": 80
+			},
+			{
+				"id": "vino_rosso",
+				"quantita": 50
+			},
+			{
+				"id": "prosciuttocotto",
+				"quantita": 30
+			},
+			{
+				"id": "mozzarella",
+				"quantita": 60
+			},
+			{
+				"id": "pangrattato",
+				"quantita": 0
+			},
+			{
+				"id": "oliosemi",
+				"quantita": 0
+			}],
+			"link":"https://ricette.giallozafferano.it/Arancini-di-riso.html",
+			"immagine":"https://www.giallozafferano.it/images/2-247/Arancini-di-riso_450x300.jpg"
+		},
+		"3":{
+			"id": "3",
+			"nome":"Pizzette rosse",
+			"ingredienti": [{
+				"id": "acqua",
+				"quantita": 250
+			},
+			{
+				"id": "farina00",
+				"quantita": 500
+			},
+			{
+				"id": "lievito",
+				"quantita": 10
+			},
+			{
+				"id": "zucchero",
+				"quantita": 12
+			},
+			{
+				"id": "olio",
+				"quantita": 60
+			},
+			{
+				"id": "sale",
+				"quantita": 15
+			},
+			{
+				"id": "passata_pomodoro",
+				"quantita": 350
+			},
+			{
+				"id": "mozzarella",
+				"quantita": 250
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "origano",
+				"quantita": 0
+			}],
+			"link":"https://ricette.giallozafferano.it/Pizzette-rosse.html",
+			"immagine": "https://www.giallozafferano.it/images/221-22130/Pizzette-rosse_450x300.jpg"
+		},
+		"4":{
+			"id": "4",
+			"nome":"Pizzelle fritte",
+			"ingredienti": [{
+				"id": "farina00",
+				"quantita": 700
+			},
+			{
+				"id": "acqua",
+				"quantita": 500
+			},
+			{
+				"id": "lievito",
+				"quantita": 4
+			},
+			{
+				"id": "sale",
+				"quantita": 20
+			},
+			{
+				"id": "pomodori_pelati",
+				"quantita": 720
+			},
+			{
+				"id": "basilico",
+				"quantita": 0
+			},
+			{
+				"id": "origano",
+				"quantita": 0
+			},
+			{
+				"id": "aglio",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 0
+			},
+			{
+				"id": "grana_padano",
+				"quantita": 70
+			},
+			{
+				"id": "oliosemi_arachide",
+				"quantita": 0
+			}],
+			"link":"https://ricette.giallozafferano.it/Pizzelle-fritte.html",
+			"immagine": "https://www.giallozafferano.it/images/175-17558/Pizzelle-fritte_450x300.jpg"
+		},
+		"5":{
+			"id": "5",
+			"nome": "Nuggets di pollo",
+			"ingredienti":[{
+				"id": "petto_di_pollo",
+				"quantita":	500		
+			},
+			{
+				"id": "pane",
+				"quantita":	80
+			},
+			{
+				"id": "cipollebianche",
+				"quantita": 50
+			},
+			{
+				"id": "senape",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "farina00",
+				"quantita": 80
+			},
+			{
+				"id": "latteintero",
+				"quantita": 80
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "pangrattato",
+				"quantita": 100
+			},
+			{
+				"id": "oliosemi",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Nuggets-di-pollo.html",
+			"immagine": "https://www.giallozafferano.it/images/201-20117/Nuggets-di-pollo_780x520_wm.jpg"
+		},
+		"6":{
+			"id": "6",
+			"nome": "Polpette di patate",
+			"ingredienti":[{
+				"id": "patatelesse",
+				"quantita": 580			
+			},
+			{
+				"id": "parmigianoreggiano",
+				"quantita": 60
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "prezzemolo",
+				"quantita": 0
+			},
+			{
+				"id": "pangrattato",
+				"quantita": 80
+			},
+			{
+				"id": "farina00",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "oliosemi_arachide",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Polpette-di-patate.html",
+			"immagine": "https://www.giallozafferano.it/images/222-22263/Polpette-di-patate_450x300.jpg"
+		},
+		"7":{
+			"id": "7",
+			"nome": "Rustici leccesi",
+			"ingredienti":[{
+				"id": "pastasfoglia",
+				"quantita": 920
+			},
+			{
+				"id": "passata_pomodoro",
+				"quantita": 30
+			},
+			{
+				"id": "mozzarella",
+				"quantita": 35
+			},
+			{
+				"id": "olio",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "latteintero",
+				"quantita": 200
+			},
+			{
+				"id": "farina00",
+				"quantita": 20
+			},
+			{
+				"id": "burro",
+				"quantita": 20
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "nocemoscata",
+				"quantita": 0
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Rustici-leccesi.html",
+			"immagine": "https://www.giallozafferano.it/images/224-22471/Rustici-leccesi_450x300.jpg"	
+		},
+		"8":{
+			"id": "8",
+			"nome": "Tartare di salmone con crema di avocado e mandorle tostate",
+			"ingredienti":[{
+				"id":"filettosalmone",
+				"quantita": 400
+			},
+			{
+				"id": "zenzero",
+				"quantita": 3
+			},
+			{
+				"id": "scorzalimone",
+				"quantita": 1
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "tabasco",
+				"quantita": 0
+			},
+			{
+				"id": "erbacipollina",
+				"quantita": 0
+			},
+			{
+				"id": "acetodiriso",
+				"quantita": 10
+			},
+			{
+				"id": "mandorlescaglie",
+				"quantita": 30
+			},
+			{
+				"id": "succo_limone",
+				"quantita": 1
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "pomodoripiccadilly",
+				"quantita": 100
+			}],
+			"link": "https://ricette.giallozafferano.it/Tartare-di-salmone-con-crema-di-avocado-e-mandorle-tostate.html",
+			"immagine": "https://www.giallozafferano.it/images/161-16178/Tartare-di-salmone-con-crema-di-avocado-e-mandorle-tostate_450x300.jpg"
+		},
+		"9":{
+			"id": "9",
+			"nome": "Taralli sugna e pepe",
+			"ingredienti":[{
+				"id":"acqua",
+				"quantita": 180
+			},
+			{
+				"id": "farina00",
+				"quantita": 500
+			},
+			{
+				"id": "lievito",
+				"quantita": 8
+			},
+			{
+				"id": "zucchero",
+				"quantita": 0
+			},
+			{
+				"id": "strutto",
+				"quantita": 200
+			},
+			{
+				"id": "mandorle",
+				"quantita": 150
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 8
+			}],
+			"link": "https://ricette.giallozafferano.it/Taralli-sugna-e-pepe.html",
+			"immagine": "https://www.giallozafferano.it/images/200-20045/Taralli-sugna-e-pepe_780x520_wm.jpg"
+		},
+		"10":{
+			"id": "10",
+			"nome": "Anelli di cipolla in pastella",
+			"ingredienti":[{
+				"id":"cipolle",
+				"quantita": 120
+			},
+			{
+				"id": "farina00",
+				"quantita": 90
+			},
+			{
+				"id": "lievitopreparazionisalate",
+				"quantita": 0
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "latteintero",
+				"quantita": 100
+			},
+			{
+				"id": "olio",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "oliosemi_arachide",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Anelli-di-cipolla-in-pastella.html",
+			"immagine": "https://www.giallozafferano.it/images/6-614/Anelli-di-cipolla-in-pastella_780x520_wm.jpg"
+		},
+		"11":{
+			"id": "11",
+			"nome": "Panelle",
+			"ingredienti":[{
+				"id":"farinaceci",
+				"quantita": 500
+			},
+			{
+				"id": "acqua",
+				"quantita": 1500
+			},
+			{
+				"id": "sale",
+				"quantita": 10
+			},
+			{
+				"id": "prezzemolo",
+				"quantita": 10
+			},
+			{
+				"id": "paninisesamo",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 0
+			},
+			{
+				"id": "oliosemi",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Panelle.html",
+			"immagine": "https://www.giallozafferano.it/images/21-2177/Panelle_450x300.jpg"
+		},
+		"12":{
+			"id": "12",
+			"nome": "Spaghetti all'amatriciana",
+			"ingredienti":[{
+				"id":"spaghetti",
+				"quantita": 320
+		},
+		{
+			"id": "pomodori_pelati",
+			"quantita": 400
+		},
+		{
+			"id": "guanciale",
+			"quantita": 150
+		},
+		{
+			"id": "pecorinoromano",
+			"quantita": 75
+		},
+		{
+			"id": "sale",
+			"quantita": 0
+		},
+		{
+			"id": "olio",
+			"quantita": 0
+		},
+		{
+			"id": "pecorino",
+			"quantita": 0
+		},
+		{
+			"id": "vino_bianco",
+			"quantita": 50
+		}],
+		"link": "https://ricette.giallozafferano.it/Spaghetti-all-Amatriciana.html",
+		"immagine": "https://www.giallozafferano.it/images/219-21923/Spaghetti-all-Amatriciana_450x300.jpg"
+		},
+		"13":{
+			"id": "13",
+			"nome": "Spaghetti cacio e pepe",
+			"ingredienti":[{
+				"id":"spaghetti",
+				"quantita": 320
+			},
+			{
+				"id": "pepenerograni",
+				"quantita": 0
+			},
+			{
+				"id": "pecorinoromano",
+				"quantita": 75
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Spaghetti-Cacio-e-Pepe.html",
+			"immagine": "https://www.giallozafferano.it/images/219-21989/Spaghetti-Cacio-e-Pepe_450x300.jpg"
+		},
+		"14":{
+			"id": "14",
+			"nome": "Lasagne alla bolognese",
+			"ingredienti":[{
+				"id":"semolagranoduro",
+				"quantita": 350
+			},
+			{
+				"id": "farina00",
+				"quantita": 220
+			},
+			{
+				"id": "spinaci",
+				"quantita": 250
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "carnebovina",
+				"quantita": 300
+			},
+			{
+				"id": "pancetta",
+				"quantita": 150
+			},
+			{
+				"id": "carote",
+				"quantita": 50
+			},
+			{
+				"id": "sedano",
+				"quantita": 50
+			},
+			{
+				"id": "cipolledorate",
+				"quantita": 50
+			},
+			{
+				"id": "vino_rosso",
+				"quantita": 100
+			},
+			{
+				"id": "passata_pomodoro",
+				"quantita": 30
+			},
+			{
+				"id": "brodovegetale",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "burro",
+				"quantita": 70
+			},
+			{
+				"id": "latteintero",
+				"quantita": 1000
+			},
+			{
+				"id": "nocemoscata",
+				"quantita": 0
+			},
+			{
+				"id": "parmigianoreggiano",
+				"quantita": 270
+			}],
+			"link": "https://ricette.giallozafferano.it/Lasagne-alla-Bolognese.html",
+			"immagine": "https://www.giallozafferano.it/images/229-22941/Lasagne-alla-Bolognese_450x300.jpg"
+		},
+		"15":{
+			"id": "15",
+			"nome": "Spaghetti alle vongole",
+			"ingredienti":[{
+				"id":"spaghetti",
+				"quantita": 320
+			},
+			{
+				"id": "vongole",
+				"quantita": 1000
+			},
+			{
+				"id": "aglio",
+				"quantita": 0
+			},
+			{
+				"id": "prezzemolo",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "salegrosso",
+				"quantita": 0
+			
+			}],
+			"link": "https://ricette.giallozafferano.it/Spaghetti-alle-vongole.html",
+			"immagine": "https://www.giallozafferano.it/images/219-21925/Spaghetti-alle-vongole_450x300.jpg"
+		},
+		"16":{
+			"id": "16",
+			"nome": "Pizzoccheri alla valtellinese",
+			"ingredienti":[{
+				"id":"farinagranosaraceno",
+				"quantita": 400
+			},
+			{
+				"id": "farina0",
+				"quantita": 100
+			},
+			{
+				"id": "acqua",
+				"quantita": 285
+			},
+			{
+				"id": "burro",
+				"quantita": 80
+			},
+			{
+				"id": "formaggiolatteria",
+				"quantita": 180
+			},
+			{
+				"id": "granapadadano",
+				"quantita": 40
+			},
+			{
+				"id": "patate",
+				"quantita": 240
+			},
+			{
+				"id": "aglio",
+				"quantita": 0
+			
+			},
+			{
+				"id": "verza",
+				"quantita": 200
+			
+			}],
+			"link": "https://ricette.giallozafferano.it/Pizzoccheri-alla-valtellinese.html",
+			"immagine": "https://www.giallozafferano.it/images/174-17426/Pizzoccheri-alla-valtellinese_450x300.jpg"
+		},
+		"17":{
+			"id": "17",
+			"nome": "Spaghetti alla puttanesca",
+			"ingredienti":[{
+				"id":"spaghetti",
+				"quantita": 320
+			},
+			{
+				"id": "pomodori_pelati",
+				"quantita": 800
+			},
+			{
+				"id": "capperisottosale",
+				"quantita": 10
+			},
+			{
+				"id": "prezzemolo",
+				"quantita": 0
+			},
+			{
+				"id": "acciughesttolio",
+				"quantita": 25
+			},
+			{
+				"id": "olive_gaeta",
+				"quantita": 100
+			},
+			{
+				"id": "aglio",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 30
+			
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			
+			}],
+			"link": "https://ricette.giallozafferano.it/Spaghetti-alla-puttanesca.html",
+			"immagine": "https://www.giallozafferano.it/images/197-19789/Spaghetti-alla-puttanesca_450x300.jpg"
+		},
+		"18":{
+			"id": "18",
+			"nome": "Pasta e fagioli",
+			"ingredienti":[{
+				"id":"ditaloni_rigati",
+				"quantita": 320
+			},
+			{
+				"id": "fagioli_borlottisecchi",
+				"quantita": 200
+			},
+			{
+				"id": "passata_pomodoro",
+				"quantita": 250
+			},
+			{
+				"id": "lardo",
+				"quantita": 80
+			},
+			{
+				"id": "prosciuttocrudo",
+				"quantita": 80
+			},
+			{
+				"id": "cipolle",
+				"quantita": 30
+			},
+			{
+				"id": "sedano",
+				"quantita": 30
+			},
+			{
+				"id": "carote",
+				"quantita": 30
+			
+			},
+			{
+				"id": "aglio",
+				"quantita": 0
+			
+			},
+			{
+				"id": "rosmarino",
+				"quantita": 0
+			
+			},
+			{
+				"id": "alloro",
+				"quantita": 0
+			
+			},
+			{
+				"id": "olio",
+				"quantita": 10
+			
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			
+			}],
+			"link": "https://ricette.giallozafferano.it/Pasta-e-fagioli.html",
+			"immagine": "https://www.giallozafferano.it/images/177-17732/Pasta-e-fagioli_450x300.jpg"
+		},
+		"19":{
+			"id": "19",
+			"nome": "Tagliatelle al ragù bianco",
+			"ingredienti":[{
+				"id":"tagliatelle_uovo",
+				"quantita": 250
+			},
+			{
+				"id": "manzo",
+				"quantita": 250
+			},
+			{
+				"id": "salsiccia",
+				"quantita": 150
+			},
+			{
+				"id": "pancetta",
+				"quantita": 100
+			},
+			{
+				"id": "sedano",
+				"quantita": 60
+			},
+			{
+				"id": "carote",
+				"quantita": 60
+			},
+			{
+				"id": "cipolledorate",
+				"quantita": 60
+			},
+			{
+				"id": "aglio",
+				"quantita": 0
+			
+			},
+			{
+				"id": "vino_bianco",
+				"quantita": 60
+			
+			},
+			{
+				"id": "olio",
+				"quantita": 50
+			
+			},
+			{
+				"id": "rosmarino",
+				"quantita": 0
+			
+			},
+			{
+				"id": "salvia",
+				"quantita": 0
+			
+			},
+			{
+				"id": "alloro",
+				"quantita": 0
+			
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			
+			},
+			{
+				"id": "acqua",
+				"quantita": 0
+			
+			}],
+			"link": "https://ricette.giallozafferano.it/Tagliatelle-al-ragu-bianco.html",
+			"immagine": "https://www.giallozafferano.it/images/5-577/Tagliatelle-al-ragu-bianco_450x300.jpg"
+		},
+		"20":{
+			"id": "20",
+			"nome": "Spaghetti aglio olio e peperoncino",
+			"ingredienti":[{
+				"id":"spaghetti",
+				"quantita": 320
+			},
+			{
+				"id": "aglio",
+				"quantita": 0
+			},
+			{
+				"id": "peperoncino_fresco",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 70
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Spaghetti-aglio-olio-e-peperoncino.html",
+			"immagine": "https://www.giallozafferano.it/images/184-18493/Spaghetti-aglio-olio-e-peperoncino_450x300.jpg"
+		},
+		"21":{
+			"id": "21",
+			"nome": "Penne al baffo",
+			"ingredienti":[{
+				"id":"mezzepenne_rigateintegrali",
+				"quantita": 320
+			},
+			{
+				"id": "prosciuttocotto",
+				"quantita": 100
+			},
+			{
+				"id": "pannafresca_liquida",
+				"quantita": 300
+			},
+			{
+				"id": "passata_pomodoro",
+				"quantita": 25
+			},
+			{
+				"id": "prezzemolo",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Penne-al-baffo.html",
+			"immagine": "https://www.giallozafferano.it/images/176-17635/Penne-al-baffo_450x300.jpg"
+		},
+		"22":{
+			"id": "22",
+			"nome": "Parmigiana di melanzane",
+			"ingredienti":[{
+				"id":"melanzaneovali_nere",
+				"quantita": 1500
+			},
+			{
+				"id": "passata_pomodoro",
+				"quantita": 1400
+			},
+			{
+				"id": "fiordilatte",
+				"quantita": 500
+			},
+			{
+				"id": "parmigianoreggiano",
+				"quantita": 150
+			},
+			{
+				"id": "cipolledorate",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "basilico",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "oliosemi_arachide",
+				"quantita": 0
+			},
+			{
+				"id": "salegrosso",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Parmigiana-di-melanzane.html",
+			"immagine": "https://www.giallozafferano.it/images/174-17464/Parmigiana-di-melanzane_450x300.jpg"
+		},
+		"23":{
+			"id": "23",
+			"nome": "Polpette al sugo",
+			"ingredienti":[{
+				"id":"manzo",
+				"quantita": 220
+			},
+			{
+				"id": "salsiccia",
+				"quantita": 165
+			},
+			{
+				"id": "pane_raffermo",
+				"quantita": 30
+			},
+			{
+				"id": "parmigianoreggiano",
+				"quantita": 25
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "prezzemolo",
+				"quantita": 0
+			},
+			{
+				"id": "origano",
+				"quantita": 0
+			},
+			{
+				"id": "nocemoscata",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 5
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 0
+			},
+			{
+				"id": "passata_pomodoro",
+				"quantita": 350
+			},
+			{
+				"id": "acqua",
+				"quantita": 50
+			}],
+			"link": "https://ricette.giallozafferano.it/Polpette-al-sugo.html",
+			"immagine": "https://www.giallozafferano.it/images/166-16604/Polpette-al-sugo_450x300.jpg"
+		},
+		"24":{
+			"id": "24",
+			"nome": "Gateau di patate",
+			"ingredienti":[{
+				"id":"patata_pastagialla",
+				"quantita": 500
+			},
+			{
+				"id": "fiordilatte",
+				"quantita": 100
+			},
+			{
+				"id": "salame",
+				"quantita": 50
+			},
+			{
+				"id": "prosciuttocotto",
+				"quantita": 50
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 5
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 0
+			},
+			{
+				"id": "parmigianoreggiano",
+				"quantita": 30
+			},
+			{
+				"id": "pangrattato",
+				"quantita": 20
+			}],
+			"link": "https://ricette.giallozafferano.it/Gateau-di-patate.html",
+			"immagine": "https://www.giallozafferano.it/images/165-16591/Gateau-di-patate_450x300.jpg"
+		},
+		"25":{
+			"id": "25",
+			"nome": "Peperoni ripieni di carne e salsiccia",
+			"ingredienti":[{
+				"id":"peperoni",
+				"quantita": 800
+			},
+			{
+				"id": "vitello",
+				"quantita": 300
+			},
+			{
+				"id": "salsiccia",
+				"quantita": 150
+			},
+			{
+				"id": "parmigianoreggiano",
+				"quantita": 65
+			},
+			{
+				"id": "pecorino",
+				"quantita": 50
+			},
+			{
+				"id": "latteintero",
+				"quantita": 150
+			},
+			{
+				"id": "uovo",
+				"quantita": 2
+			},
+			{
+				"id": "aglio",
+				"quantita": 0
+			},
+			{
+				"id": "prezzemolo",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "pangrattato",
+				"quantita": 15
+			},
+			{
+				"id": "olio",
+				"quantita": 20
+			}],
+			"link": "https://ricette.giallozafferano.it/Peperoni-ripieni-di-carne-e-salsiccia.html",
+			"immagine": "https://www.giallozafferano.it/images/196-19605/Peperoni-ripieni-di-carne-e-salsiccia_450x300.jpg"
+		},
+		"26":{
+			"id": "26",
+			"nome": "Pollo al curry",
+			"ingredienti":[{
+				"id":"petto_di_pollo",
+				"quantita": 800
+			},
+			{
+				"id": "yogurt_greco",
+				"quantita": 250
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "pepe_cayenna",
+				"quantita": 0
+			},
+			{
+				"id": "curcuma_polvere",
+				"quantita": 0
+			},
+			{
+				"id": "paprika_affumicata",
+				"quantita": 0
+			},
+			{
+				"id": "cannella_polvere",
+				"quantita": 0
+			},
+			{
+				"id": "cumino",
+				"quantita": 0
+			},
+			{
+				"id": "semi_coriandolo",
+				"quantita": 0
+			},
+			{
+				"id": "aglio",
+				"quantita": 0
+			},
+			{
+				"id": "zenzero_fresco",
+				"quantita": 0
+			},
+			{
+				"id": "peperoncino_fresco",
+				"quantita": 0
+			},
+			{
+				"id": "cipollebianche",
+				"quantita": 0
+			},
+			{
+				"id": "coriandolo_fresco",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 10
+			},
+			{
+				"id": "riso_basmati",
+				"quantita": 400
+			},
+			{
+				"id": "acqua",
+				"quantita": 600
+			},
+			{
+				"id": "cannella_stecche",
+				"quantita": 0
+			},
+			{
+				"id": "cardamomo",
+				"quantita": 0
+			},
+			{
+				"id": "anice_stellato",
+				"quantita": 0
+			},
+			{
+				"id": "salegrosso",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Pollo-al-curry.html",
+			"immagine": "https://www.giallozafferano.it/images/165-16577/Pollo-al-curry_450x300.jpg"
+		},
+		"27":{
+			"id": "27",
+			"nome": "Saltimbocca alla romana",
+			"ingredienti":[{
+				"id":"fettine_vitello",
+				"quantita": 300
+			},
+			{
+				"id": "prosciuttocrudo",
+				"quantita": 40
+			},
+			{
+				"id": "salvia",
+				"quantita": 0
+			},
+			{
+				"id": "burro",
+				"quantita": 50
+			},
+			{
+				"id": "vino_bianco",
+				"quantita": 100
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "farina00",
+				"quantita": 50
+			},
+			{
+				"id": "olio",
+				"quantita": 20
+			},
+			{
+				"id": "acqua",
+				"quantita": 20
+			}],
+			"link": "https://ricette.giallozafferano.it/Saltimbocca-alla-Romana.html",
+			"immagine": "https://www.giallozafferano.it/images/204-20401/Saltimbocca-alla-Romana_450x300.jpg"
+		},
+		"28":{
+			"id": "28",
+			"nome": "Pollo al limone",
+			"ingredienti":[{
+				"id":"petto_di_pollo",
+				"quantita": 600
+			},
+			{
+				"id": "olio",
+				"quantita": 40
+			},
+			{
+				"id": "farina00",
+				"quantita": 0
+			},
+			{
+				"id": "limone",
+				"quantita": 0
+			},
+			{
+				"id": "acqua",
+				"quantita": 180
+			},
+			{
+				"id": "vino_bianco",
+				"quantita": 100
+			},
+			{
+				"id": "amido_mais",
+				"quantita": 20
+			},
+			{
+				"id": "zucchero",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Pollo-al-limone.html",
+			"immagine": "https://www.giallozafferano.it/images/196-19689/Pollo-al-limone_450x300.jpg"
+		},
+		"29":{
+			"id": "29",
+			"nome": "Salsiccia e patate al forno",
+			"ingredienti":[{
+				"id":"luganega",
+				"quantita": 500
+			},
+			{
+				"id": "patate",
+				"quantita": 500
+			},
+			{
+				"id": "olio",
+				"quantita": 50
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "pomodori_pelati",
+				"quantita": 150
+			},
+			{
+				"id": "origano",
+				"quantita": 0
+			},
+			{
+				"id": "rosmarino",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Salsiccia-e-patate-al-forno.html",
+			"immagine": "https://www.giallozafferano.it/images/198-19877/Salsiccia-e-patate-al-forno_450x300.jpg"
+		},
+		"30":{
+			"id": "30",
+			"nome": "Insala tiepida di polpo e patate",
+			"ingredienti":[{
+				"id":"polpo",
+				"quantita": 1000
+			},
+			{
+				"id": "patate",
+				"quantita": 1000
+			},
+			{
+				"id": "alloro",
+				"quantita": 0
+			},
+			{
+				"id": "prezzemolo",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "olio",
+				"quantita": 60
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "succo_limone",
+				"quantita": 60
+			}],
+			"link": "https://ricette.giallozafferano.it/Insalata-tiepida-di-polpo-e-patate.html",
+			"immagine": "https://www.giallozafferano.it/images/168-16893/Insalata-tiepida-di-polpo-e-patate_450x300.jpg"
+		},
+		"31":{
+			"id": "31",
+			"nome": "Scaloppine al limone",
+			"ingredienti":[{
+				"id":"fettine_vitello",
+				"quantita": 430
+			},
+			{
+				"id": "succo_limone",
+				"quantita": 50
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "pepe",
+				"quantita": 0
+			},
+			{
+				"id": "farina00",
+				"quantita": 0
+			},
+			{
+				"id": "burro",
+				"quantita": 40
+			}],
+			"link": "https://ricette.giallozafferano.it/Scaloppine-al-limone.html",
+			"immagine": "https://www.giallozafferano.it/images/13-1307/Scaloppine-al-limone_450x300.jpg"
+		},
+		"32":{
+			"id": "32",
+			"nome": "Tiramisù",
+			"ingredienti":[{
+				"id":"savoiardi",
+				"quantita": 300
+			},
+			{
+				"id": "uovo",
+				"quantita": 220
+			},
+			{
+				"id": "mascarpone",
+				"quantita": 500
+			},
+			{
+				"id": "zucchero",
+				"quantita": 100
+			},
+			{
+				"id": "caffe",
+				"quantita": 300
+			},
+			{
+				"id": "cacaoamaro",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Tiramisu.html",
+			"immagine": "https://www.giallozafferano.it/images/173-17354/Tiramisu_450x300.jpg"
+		},
+		"33":{
+			"id": "33",
+			"nome": "Tortino di cioccolato con cuore fondente",
+			"ingredienti":[{
+				"id":"cioccolatofondente",
+				"quantita": 150
+			},
+			{
+				"id": "burro",
+				"quantita": 80
+			},
+			{
+				"id": "farina00",
+				"quantita": 20
+			},
+			{
+				"id": "cacaoamaro",
+				"quantita": 10
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "tuorli",
+				"quantita": 0
+			},
+			{
+				"id": "zuccherovelo",
+				"quantita": 90
+			},
+			{
+				"id": "baccellovaniglia",
+				"quantita": 0
+			},
+			{
+				"id": "zuccherocanna",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Tortino-di-cioccolato-con-cuore-fondente.html",
+			"immagine": "https://www.giallozafferano.it/images/173-17316/Tortino-di-cioccolato-con-cuore-fondente_450x300.jpg"
+		},
+		"34":{
+			"id": "34",
+			"nome": "Nutellotti",
+			"ingredienti":[{
+				"id":"nutella",
+				"quantita": 305
+			},
+			{
+				"id": "farina00",
+				"quantita": 135
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "granellanocciole",
+				"quantita": 30
+			}],
+			"link": "https://ricette.giallozafferano.it/Nutellotti.html",
+			"immagine": "https://www.giallozafferano.it/images/152-15295/Nutellotti_450x300.jpg"
+		},
+		"35":{
+			"id": "35",
+			"nome": "Brownies",
+			"ingredienti":[{
+				"id":"cioccolatofondente",
+				"quantita": 265
+			},
+			{
+				"id": "uovo",
+				"quantita": 200
+			},
+			{
+				"id": "nocciolespellate",
+				"quantita": 175
+			},
+			{
+				"id": "burro",
+				"quantita": 135
+			},
+			{
+				"id": "farina00",
+				"quantita": 135
+			},
+			{
+				"id": "zucchero",
+				"quantita": 135
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Brownies.html",
+			"immagine": "https://www.giallozafferano.it/images/7-780/Brownies_450x300.jpg"
+		},
+		"36":{
+			"id": "36",
+			"nome": "Crepe alla nutella",
+			"ingredienti":[{
+				"id":"uovo",
+				"quantita": 0
+			},
+			{
+				"id": "farina00",
+				"quantita": 250
+			},
+			{
+				"id": "latteintero",
+				"quantita": 500
+			},
+			{
+				"id": "burro",
+				"quantita": 0
+			},
+			{
+				"id": "nutella",
+				"quantita": 0
+			},
+			{
+				"id": "zuccherovelo",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Crepe-alla-Nutella.html",
+			"immagine": "https://www.giallozafferano.it/images/172-17262/Crepe-alla-Nutella_450x300.jpg"
+		},
+		"37":{
+			"id": "37",
+			"nome": "Graffe",
+			"ingredienti":[{
+				"id":"latteintero",
+				"quantita": 120
+			},
+			{
+				"id": "farina00",
+				"quantita": 200
+			},
+			{
+				"id": "lievito",
+				"quantita": 3
+			},
+			{
+				"id": "patate",
+				"quantita": 300
+			},
+			{
+				"id": "farinamanitoba",
+				"quantita": 400
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "zucchero",
+				"quantita": 250
+			},
+			{
+				"id": "burro",
+				"quantita": 130
+			},
+			{
+				"id": "mieleacacia",
+				"quantita": 8
+			},
+			{
+				"id": "scorzalimone",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 8
+			},
+			{
+				"id": "oliosemi_arachide",
+				"quantita": 1000
+			}],
+			"link": "https://ricette.giallozafferano.it/Graffe.html",
+			"immagine": "https://www.giallozafferano.it/images/220-22059/Graffe_450x300.jpg"
+		},
+		"38":{
+			"id": "38",
+			"nome": "Muffin al cioccolato",
+			"ingredienti":[{
+				"id":"cacaoamaro",
+				"quantita": 70
+			},
+			{
+				"id": "farina00",
+				"quantita": 300
+			},
+			{
+				"id": "zucchero",
+				"quantita": 300
+			},
+			{
+				"id": "burro",
+				"quantita": 150
+			},
+			{
+				"id": "cioccolatofondente",
+				"quantita": 100
+			},
+			{
+				"id": "uovo",
+				"quantita": 220
+			},
+			{
+				"id": "latteintero",
+				"quantita": 180
+			},
+			{
+				"id": "lievitidolci",
+				"quantita": 6
+			},
+			{
+				"id": "bicarbonato",
+				"quantita": 2
+			}],
+			"link": "https://ricette.giallozafferano.it/Muffin-al-cioccolato.html",
+			"immagine": "https://www.giallozafferano.it/images/165-16576/Muffin-al-cioccolato_450x300.jpg"
+		},
+		"39":{
+			"id": "39",
+			"nome": "Sacher torta",
+			"ingredienti":[{
+				"id":"cioccolatofondente60",
+				"quantita": 260
+			},
+			{
+				"id": "tuorli",
+				"quantita": 60
+			},
+			{
+				"id": "albumi",
+				"quantita": 90
+			},
+			{
+				"id": "burro",
+				"quantita": 65
+			},
+			{
+				"id": "farina00",
+				"quantita": 65
+			},
+			{
+				"id": "zuccherovelo",
+				"quantita": 20
+			},
+			{
+				"id": "zucchero",
+				"quantita": 90
+			},
+			{
+				"id": "baccellovaniglia",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "confetturaalbicocche",
+				"quantita": 150
+			},
+			{
+				"id": "pannafresca_liquida",
+				"quantita": 125
+			}],
+			"link": "https://ricette.giallozafferano.it/Sacher-torte.html",
+			"immagine": "https://www.giallozafferano.it/images/179-17923/Sacher-torte_450x300.jpg"
+		},
+		"40":{
+			"id": "40",
+			"nome": "Crostata di fragole fresche",
+			"ingredienti":[{
+				"id":"farina00",
+				"quantita": 250
+			},
+			{
+				"id": "burro",
+				"quantita": 125
+			},
+			{
+				"id": "zuccherovelo",
+				"quantita": 100
+			},
+			{
+				"id": "uovo",
+				"quantita": 60
+			},
+			{
+				"id": "scorzalimone",
+				"quantita": 0
+			},
+			{
+				"id": "tuorli",
+				"quantita": 0
+			},
+			{
+				"id": "amido_mais",
+				"quantita": 45
+			},
+			{
+				"id": "zucchero",
+				"quantita": 240
+			},
+			{
+				"id": "latteintero",
+				"quantita": 400
+			},
+			{
+				"id": "pannafresca_liquida",
+				"quantita": 100
+			},
+			{
+				"id": "baccellovaniglia",
+				"quantita": 0
+			},
+			{
+				"id": "acqua",
+				"quantita": 100
+			},
+			{
+				"id": "succo_limone",
+				"quantita": 0
+			},
+			{
+				"id": "fragole",
+				"quantita": 600
+			}],
+			"link": "https://ricette.giallozafferano.it/Crostata-di-fragole-fresche.html",
+			"immagine": "https://www.giallozafferano.it/images/210-21097/Crostata-di-fragole-fresche_450x300.jpg"
+		},
+		"41":{
+			"id": "41",
+			"nome": "Crostata alla nutella",
+			"ingredienti":[{
+				"id":"burro",
+				"quantita": 110
+			},
+			{
+				"id": "farina00",
+				"quantita": 215
+			},
+			{
+				"id": "tuorli",
+				"quantita": 0
+			},
+			{
+				"id": "zuccherovelo",
+				"quantita": 85
+			},
+			{
+				"id": "nutella",
+				"quantita": 45
+			},
+			{
+				"id": "burrocacao",
+				"quantita": 90
+			},
+			{
+				"id": "pannafresca_liquida",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Crostata-alla-Nutella.html",
+			"immagine": "https://www.giallozafferano.it/images/166-16683/Crostata-alla-Nutella_450x300.jpg"
+		},
+		"42":{
+			"id": "42",
+			"nome": "Crostata alla confettura di albicocche",
+			"ingredienti":[{
+				"id":"farina00",
+				"quantita": 250
+			},
+			{
+				"id": "burro",
+				"quantita": 150
+			},
+			{
+				"id": "zuccherovelo",
+				"quantita": 100
+			},
+			{
+				"id": "tuorli",
+				"quantita": 80
+			},
+			{
+				"id": "mieleacacia",
+				"quantita": 20
+			},
+			{
+				"id": "scorzalimone",
+				"quantita": 0
+			},
+			{
+				"id": "baccellovaniglia",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "confetturaalbicocche",
+				"quantita": 250
+			}],
+			"link": "https://ricette.giallozafferano.it/Crostata-alla-confettura-di-albicocche.html",
+			"immagine": "https://www.giallozafferano.it/images/216-21628/Crostata-alla-confettura-di-albicocche_450x300.jpg"
+		},
+		"43":{
+			"id": "43",
+			"nome": "Zeppole di San Giuseppe fritte",
+			"ingredienti":[{
+				"id":"uovo",
+				"quantita": 0
+			},
+			{
+				"id": "tuorli",
+				"quantita": 0
+			},
+			{
+				"id": "burro",
+				"quantita": 55
+			},
+			{
+				"id": "acqua",
+				"quantita": 250
+			},
+			{
+				"id": "farina00",
+				"quantita": 150
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "amido_mais",
+				"quantita": 22.5
+			},
+			{
+				"id": "baccellovaniglia",
+				"quantita": 0
+			},
+			{
+				"id": "zucchero",
+				"quantita": 70
+			},
+			{
+				"id": "latteintero",
+				"quantita": 200
+			},
+			{
+				"id": "pannafresca_liquida",
+				"quantita": 50
+			},
+			{
+				"id": "amarenesciroppate",
+				"quantita": 0
+			},
+			{
+				"id": "oliosemi_arachide",
+				"quantita": 0
+			},
+			{
+				"id": "zuccherovelo",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Zeppole-di-San-Giuseppe-fritte.html",
+			"immagine": "https://www.giallozafferano.it/images/175-17516/Zeppole-di-San-Giuseppe-fritte_450x300.jpg"
+		},
+		"44":{
+			"id": "44",
+			"nome": "Salame al cioccolato",
+			"ingredienti":[{
+				"id":"cioccolatofondente",
+				"quantita": 200
+			},
+			{
+				"id": "biscottisecchi",
+				"quantita": 175
+			},
+			{
+				"id": "burro",
+				"quantita": 150
+			},
+			{
+				"id": "zucchero",
+				"quantita": 150
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "rum",
+				"quantita": 10
+			},
+			{
+				"id": "zuccherovelo",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Salame-di-cioccolato.html",
+			"immagine": "https://www.giallozafferano.it/images/173-17347/Salame-di-cioccolato_450x300.jpg"
+		},
+		"45":{
+			"id": "45",
+			"nome": "Treccia di pasta lievitata",
+			"ingredienti":[{
+				"id":"burro",
+				"quantita": 40
+			},
+			{
+				"id": "farina00",
+				"quantita": 320
+			},
+			{
+				"id": "lievito",
+				"quantita": 12
+			},
+			{
+				"id": "zucchero",
+				"quantita": 80
+			},
+			{
+				"id": "baccellovaniglia",
+				"quantita": 0
+			},
+			{
+				"id": "scorzalimone",
+				"quantita": 0
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "latteintero",
+				"quantita": 80
+			},
+			{
+				"id": "granellazucchero",
+				"quantita": 40
+			}],
+			"link": "https://ricette.giallozafferano.it/Treccia-di-pasta-lievitata.html",
+			"immagine": "https://www.giallozafferano.it/images/224-22488/Treccia-di-pasta-lievitata_450x300.jpg"
+		},
+		"46":{
+			"id": "46",
+			"nome": "Profiteroles al cioccolato",
+			"ingredienti":[{
+				"id":"acqua",
+				"quantita": 262
+			},
+			{
+				"id": "latteintero",
+				"quantita": 62
+			},
+			{
+				"id": "burro",
+				"quantita": 55
+			},
+			{
+				"id": "sale",
+				"quantita": 3
+			},
+			{
+				"id": "zucchero",
+				"quantita": 158
+			},
+			{
+				"id": "farina00",
+				"quantita": 77
+			},
+			{
+				"id": "uovo",
+				"quantita": 0
+			},
+			{
+				"id": "tuorli",
+				"quantita": 0
+			},
+			{
+				"id": "pannafresca_liquida",
+				"quantita": 330
+			},
+			{
+				"id": "zuccherovelo",
+				"quantita": 50
+			},
+			{
+				"id": "baccellovaniglia",
+				"quantita": 0
+			},
+			{
+				"id": "cioccolatofondente",
+				"quantita": 450
+			},
+			{
+				"id": "fiocchisale",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Profiteroles-al-cioccolato.html",
+			"immagine": "https://www.giallozafferano.it/images/181-18198/Profiteroles-al-cioccolato_450x300.jpg"
+		},
+		"47":{
+			"id": "47",
+			"nome": "Macarons",
+			"ingredienti":[{
+				"id":"farinamandorle",
+				"quantita": 125
+			},
+			{
+				"id": "zuccherovelo",
+				"quantita": 125
+			},
+			{
+				"id": "albumi",
+				"quantita": 87.5
+			},
+			{
+				"id": "zucchero",
+				"quantita": 135
+			},
+			{
+				"id": "acqua",
+				"quantita": 32
+			},
+			{
+				"id": "pannafresca_liquida",
+				"quantita": 90
+			},
+			{
+				"id": "cioccolatobianco",
+				"quantita": 180
+			},
+			{
+				"id": "burro",
+				"quantita": 12
+			},
+			{
+				"id": "baccellovaniglia",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Macarons.html",
+			"immagine": "https://www.giallozafferano.it/images/207-20759/Macarons_450x300.jpg"
+		},
+		"48":{
+			"id": "48",
+			"nome": "Semifreddo al pistacchio e nutella",
+			"ingredienti":[{
+				"id":"zucchero",
+				"quantita": 135
+			},
+			{
+				"id": "tuorli",
+				"quantita": 100
+			},
+			{
+				"id": "acqua",
+				"quantita": 37
+			},
+			{
+				"id": "pastapistacchi",
+				"quantita": 60
+			},
+			{
+				"id": "granellapistacchi",
+				"quantita": 25
+			},
+			{
+				"id": "pannafresca_liquida",
+				"quantita": 300
+			},
+			{
+				"id": "nutella",
+				"quantita": 150
+			}],
+			"link": "https://ricette.giallozafferano.it/Semifreddo-al-pistacchio-e-Nutella.html",
+			"immagine": "https://www.giallozafferano.it/images/157-15758/Semifreddo-al-pistacchio-e-Nutella_780x520_wm.jpg"
+		},
+		"49":{
+			"id": "49",
+			"nome": "Torta fredda con mousse ai lamponi e nutella",
+			"ingredienti":[{
+				"id":"biscottisecchi",
+				"quantita": 400
+			},
+			{
+				"id": "burro",
+				"quantita": 170
+			},
+			{
+				"id": "fruttiboscodis",
+				"quantita": 15
+			},
+			{
+				"id": "sale",
+				"quantita": 3
+			},
+			{
+				"id": "zucchero",
+				"quantita": 100
+			},
+			{
+				"id": "albumi",
+				"quantita": 50
+			},
+			{
+				"id": "acqua",
+				"quantita": 30
+			},
+			{
+				"id": "pannafresca_liquida",
+				"quantita": 190
+			},
+			{
+				"id": "lamponi",
+				"quantita": 40
+			},
+			{
+				"id": "gelatinafogli",
+				"quantita": 4
+			},
+			{
+				"id": "nutella",
+				"quantita": 150
+			},
+			{
+				"id": "fruttibosco",
+				"quantita": 0
+			},
+			{
+				"id": "fragole",
+				"quantita": 0
+			},
+			{
+				"id": "menta",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/Torta-fredda-con-mousse-ai-lamponi-e-Nutella.html",
+			"immagine": "https://www.giallozafferano.it/images/210-21004/Torta-fredda-con-mousse-ai-lamponi-e-Nutella_450x300.jpg"
+		},
+		"50":{
+			"id": "50",
+			"nome": "Cupcake",
+			"ingredienti":[{
+				"id":"burro",
+				"quantita": 270
+			},
+			{
+				"id": "farina00",
+				"quantita": 120
+			},
+			{
+				"id": "zucchero",
+				"quantita": 120
+			},
+			{
+				"id": "uovo",
+				"quantita": 165
+			},
+			{
+				"id": "essenzavaniglia",
+				"quantita": 0
+			},
+			{
+				"id": "lievitidolci",
+				"quantita": 2
+			},
+			{
+				"id": "sale",
+				"quantita": 0
+			},
+			{
+				"id": "zuccherovelo",
+				"quantita": 300
+			},
+			{
+				"id": "latteintero",
+				"quantita": 0
+			}],
+			"link": "https://ricette.giallozafferano.it/cupcake.html",
+			"immagine": "https://www.giallozafferano.it/images/180-18002/cupcake_450x300.jpg"
+		}																													
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

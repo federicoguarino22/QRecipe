@@ -1,0 +1,30 @@
+{
+    "id" : "",
+    "data" : "",
+    "ricetta" : "",
+    "cliente" : "",
+    "ingredienti" : [{
+		"id": "",
+		"stato_consegna" : ""
+	},
+	{	
+		"id": "id_ingrediente_2", 
+		"stato_consegna" : "consegnato"
+	},
+	{	
+		"id": "id_ingrediente_3", 
+		"stato_consegna" : "consegnato"
+	},
+	{
+		"id": "id_ingrediente_4", 
+		"stato_consegna" : "consegnato"
+	},
+	{	
+		"id": "id_ingrediente_5", 
+		"stato_consegna" : "consegnato"
+	},
+	{	"id": "id_ingrediente_6", 
+		"stato_consegna" : "non_consegnato"
+	}],
+		
+}

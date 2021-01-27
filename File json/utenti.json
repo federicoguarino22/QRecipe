@@ -1,0 +1,24 @@
+{	
+	"1":{
+		"email": "",
+		"password": "",
+		"nome": ""
+		
+	},
+	"2":{
+		"email": "",
+		"password": "",
+		"nome": ""
+		
+	},
+	"3":{	
+		"nome": "",
+		"cognome": "",
+		"username": "",
+		"email": "",
+		"numero": "",
+		"password": "",
+		"conferma_pwd": "",
+		"tipo": "corriere"
+	}
+}
